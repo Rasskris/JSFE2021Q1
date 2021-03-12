@@ -4,108 +4,153 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Wildlife</title>
 </head>
 <body>
+  <!-- Header start -->
   <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <img src="./assets/logo-pic.svg" alt="Logo" class="header__logo-pic">
-        <h1 class="header__logo-text">WILDLIFE</h1>
+    <div class="wrapper">
+      <div class="header__wrapper">
+        <div class="header__logo logo">
+            <img src="./assets/svg/logo-pic.svg" alt="Logo" class="logo__pic">
+            <h1 class="logo__text header__logo-text">wildlife</h1>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list menu">
+            <li class="header__item menu-item blog">
+              <a href="#!" class="header__item-link">Blog</a>
+            </li>
+            <li class="header__item menu-item contacts">
+              <a href="#!" class="header__item-link">Contacts</a>
+            </li>
+            <li class="header__item menu-item search">
+              <a href="#!" class="header__item-link">
+                <img src="./assets/svg/search-icon.svg" alt="Search" class="search__pic">
+              </a>
+            </li>
+            <li class="header__item sign-in">
+              <a href="#!" class="header__item-link btn sign-in__btn">Sign in</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item"><a href="#!" class="header__item-link">Blog</a></li>
-          <li class="header__item"><a href="#!" class="header__item-link">Contacts</a></li>
-          <li class="header__item">
-            <a href="#!" class="header__item-link"><img src="./assets/search-icon.svg" alt="Search" class="header__item-pic"></a>
-          </li>
-          <li class="header__item"><a href="#!" class="header__item-link">Singn in</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+  <!-- Header end -->
+
   <main class="main">
+    <!-- Survival start -->
     <section class="survival">
-      <div class="survival__wrapper">
-        <h1 class="survival__title"></h1>
-        <p class="survival__desc"></p>
-        <a href="#!" class="survival__donate">Donate</a>
-      </div>
-    </section>
-    <section class="articles">
-      <div class="articles__wrapper">
-        <h1 class="articles__title"></h1>
-        <p class="articles__desc"></p>
-        <div class="articles__cards">
-          <a href="#!" class="articles__card-prev"></a>
-          <article class="articles__card">
-            <img src="./assets/article-img-1.jpg" alt="Deer" class="articles__card-pic">
-            <h3 class="articles__card-title">Deer</h3>
-            <p class="articles__card-desc">Naturalist investigation</p>
-          </article>
-          <article class="articles__card">
-            <img src="./assets/article-img-2.jpg" alt="Squirrel" class="articles__card-pic">
-            <h3 class="articles__card-title">Squirrel</h3>
-            <p class="articles__card-desc">Kamikaze squirrels</p>
-          </article>
-          <article class="articles__card">
-            <img src="./assets/article-img-3.jpg" alt="Bird" class="articles__card-pic">
-            <h3 class="articles__card-title">Bird</h3>
-            <p class="articles__card-desc">Birds Fight club</p>
-          </article>
-          <a href="#!" class="articles__card-next"></a>
+      <div class="wrapper">
+        <div class="survival__wrapper">
+          <h2 class="survival__title">Survival</h2>
+          <p class="survival__desc">What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.</p>
+          <a href="#!" class="survival__donate btn">Donate</a>
         </div>
       </div>
     </section>
-    <section class="notifications">
-      <div class="notifications__wrapper">
-        <h1 class="notifications__title"></h1>
-        <form action="" class="notifications__form">
-          <div class="notifications__form-wrapper">
-            <input type="text" class="notifications__form-field" placeholder="Email">
-            <input type="submit" class="notifications__form-submit">
+    <!-- Survival end -->
+
+    <!-- Artecles start -->
+    <section class="articles">
+      <div class="wrapper">
+        <div class="articles__wrapper">
+          <h2 class="articles__title">Latest articles</h2>
+          <h2 class="articles__second-title">Breaking news from the wild</h2>
+          <div class="articles__cards slider">
+            <a href="#!" class="slider__elem prev"></a>
+            <article class="articles__card slider__elem">
+              <img src="./assets/article-img-1.jpg" alt="Deer" class="articles__card-pic">
+              <div class="articles__card-text">
+                <h4 class="articles__card-title">Deer</h4>
+                <p class="articles__card-desc">Naturalist investigation</p>
+              </div>
+              <a href="#!" class="articles__card-link"></a>
+            </article>
+            <article class="articles__card slider__elem">
+              <img src="./assets/article-img-2.jpg" alt="Squirrel" class="articles__card-pic">
+              <div class="articles__card-text">
+                <h4 class="articles__card-title">Squirrel</h4>
+                <p class="articles__card-desc">Kamikaze squirrels</p>
+              </div>
+              <a href="#!" class="articles__card-link"></a>
+            </article>
+            <article class="articles__card slider__elem">
+              <img src="./assets/article-img-3.jpg" alt="Bird" class="articles__card-pic">
+              <div class="articles__card-text">
+                <h4 class="articles__card-title bird">Bird</h4>
+                <p class="articles__card-desc bird">Birds Fight club</p>
+              </div>
+              <a href="#!" class="articles__card-link"></a>
+            </article>
+            <a href="#!" class="slider__elem next"></a>
           </div>
-        </form>
+        </div>
       </div>
     </section>
-  </main>
-  <footer>
-    <div class="footer__wrapper">
-      <div class="footer__logo">
-        <img src="./assets/logo-pic.svg" alt="Logo" class="footer__logo-pic">
-        <h1 class="footer__logo-text">WILDLIFE</h1>
+    <!-- Articles end -->
+
+    <!-- Notifications start -->
+    <section class="notifications">
+      <div class="wrapper">
+        <div class="notifications__wrapper">
+          <h3 class="notifications__title">Get notified about new amazing articles</h3>
+          <form action="" class="notifications__form">
+            <div class="notifications__form-wrapper">
+              <input type="text" class="notifications__form-field" placeholder="Email">
+              <input type="submit" class="notifications__form-submit btn" value="Send">
+            </div>
+          </form>
+        </div>
       </div>
-      <nav class="footer__nav">
-        <ul class="footer__list">
-          <li class="footer__item"><a href="#!" class="footer__item-link">Articles</a></li>
-          <li class="footer__item"><a href="#!" class="footer__item-link">About us</a></li>
-          <li class="footer__item"><a href="#!" class="footer__item-link">Learn more</a></li>
+    </section>
+    <!-- Notifications end -->
+
+  </main>
+  <!-- Footer start -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__wrapper">
+        <div class="footer__logo logo">
+          <img src="./assets/svg/logo-pic.svg" alt="Logo" class="logo__pic">
+          <p class="logo__text footer__logo-text">wildlife</p>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list menu">
+            <li class="footer__item menu-item">
+              <a href="#!" class="footer__item-link">Articles</a>
+            </li>
+            <li class="footer__item menu-item">
+              <a href="#!" class="footer__item-link">About us</a>
+            </li>
+            <li class="footer__item menu-item">
+              <a href="#!" class="footer__item-link">Learn more</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact-list">
+          <li class="contact-list__item icon">
+            <a href="#!" class="contact-list__item-link icon__facebook">
+            </a>
+          </li>
+          <li class="contact-list__item icon">
+            <a href="#!" class="contact-list__item-link icon__instagram">
+            </a>
+          </li>
+          <li class="contact-list__item icon">
+            <a href="#!" class="contact-list__item-link icon__pinterest">
+            </a>
+          </li>
+          <li class="contact-list__item icon">
+            <a href="#!" class="contact-list__item-link icon__telegram">
+            </a>
+          </li>
         </ul>
-      </nav>
-      <ul class="contact-list">
-        <li class="contact-list__item">
-          <a href="#!" class="contact-list__item-link">
-            <img src="./assets/contact-icon-1.svg" alt="Facebook" class="contanct-list__item-icon">
-          </a>
-        </li>
-        <li class="contact-list__item">
-          <a href="#!" class="contact-list__item-link">
-            <img src="./assets/contact-icon-2.svg" alt="Instagram" class="contanct-list__item-icon">
-          </a>
-        </li>
-        <li class="contact-list__item">
-          <a href="#!" class="contact-list__item-link">
-            <img src="./assets/contact-icon-3.svg" alt="Pinterest" class="contanct-list__item-icon">
-          </a>
-        </li>
-        <li class="contact-list__item">
-          <a href="#!" class="contact-list__item-link">
-            <img src="./assets/contact-icon-4.svg" alt="Telegram" class="contanct-list__item-icon">
-          </a>
-        </li>
-      </ul>
+      </div>
     </div>
   </footer>
+  <!-- Footer end -->
 </body>
 </html>
