@@ -103,3 +103,71 @@ li {
 	background: #8f5613;
 	border-color: #8f5613;
 }
+
+/* Header styles start */
+.header {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.header__wrapper {
+	max-width: 1200px;
+	margin: 3px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.header__logo {
+	margin-top: -4px;
+}
+.header__nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.header__item {
+	margin-right: 61px;
+	padding-left: 2px;
+}
+.header__item:last-child {
+	margin-right: 0;
+}
+.search__pic {
+	padding-top: 15px;
+}
+.blog {
+	width: 50px;
+	height: 60px;
+}
+.contacts {
+	width: 96px;
+	height: 60px;
+}
+.search {
+	width: 32px;
+	height: 32px;
+}
+.sign-in {
+	width: 122px;
+	height: 50px;
+}
+.sign-in__btn {
+	font-family: "Roboto";
+	font-size: 23px;
+	line-height: 61px;
+	text-align: center;
+	border: 2px solid #cd6326;
+	border-radius: 5px;
+	padding: 10px 24px 9px 23px;
+
+	color: #f7f7f7;
+}
+.sign-in__btn:hover {
+	background: #cd6326;
+}
+.sign-in__btn:active {
+	border: 2px solid #8f5613;
+	background: #8f5613;
+}
+/* Header styles end */
