@@ -120,15 +120,15 @@ body {
 	transform-origin: center top;
 }
 .piano-key.sharp:hover {
-	background-color: #181a1c;
+	background-color: #232528;
 	box-shadow: 1px 1px 10px 1px #313940 inset;
 }
 .piano-key.piano-key-active {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(235, 246, 247);
 	transform: scale(0.96);
 }
 .piano-key.sharp.piano-key-active {
-	background-color: #181a1c;
+	background-color: #0c0c0c;
 	box-shadow: 1px 1px 10px 1px #313940 inset;
 	transform: scale(0.96);
 }
