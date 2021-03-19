@@ -56,3 +56,10 @@ piano.addEventListener('mouseout', ({ target, which }) => {
     target.classList.add('piano-key-remove-mouse');
   }
 });
+
+piano.addEventListener('mousedown', ({ target }) => {
+  if (target.classList.contains('piano-key')) {
+    piano.addEventListener('mouseover', addActiveForHold);
+    addActive(target);
+  }
+});
