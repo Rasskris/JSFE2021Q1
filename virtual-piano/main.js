@@ -47,3 +47,12 @@ btnContainer.addEventListener('click', ({ target }) => {
     })
   }
 });
+
+piano.addEventListener('mouseout', ({ target, which }) => {
+  if (target.classList.contains('piano-key') && which) {
+    removeActive(target);
+  }
+  else if (target.classList.contains('piano-key')) {
+    target.classList.add('piano-key-remove-mouse');
+  }
+});
