@@ -88,3 +88,18 @@ window.addEventListener('keyup', ({ code }) => {
   if (!target) return;
   target.classList.remove('piano-key-active');
 });
+
+const toggleFullScreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+};
+
+const btnFullScreen = document.querySelector('.fullscreen');
+btnFullScreen.addEventListener('click', (e) => {
+  toggleFullScreen();
+});
