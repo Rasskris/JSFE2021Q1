@@ -4,6 +4,17 @@ const playAudio = (src) => {
   audio.play();
 };
 
+const addActive = (element) => {
+  element.classList.remove('piano-key-remove-mouse');
+  element.classList.add('piano-key-active', 'piano-key-active-pseudo');
+  const audioSrc = `./assets/audio/${element.dataset.note}.mp3`;
+  playAudio(audioSrc);
+};
+
+const removeActive = (element) => {
+  element.classList.add('piano-key-remove-mouse');
+  element.classList.remove('piano-key-active', 'piano-key-active-pseudo');
+};
 
 const btnContainer = document.querySelector('.btn-container');
 const buttons = document.querySelectorAll('.btn');
