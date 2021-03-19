@@ -123,8 +123,13 @@ body {
 	background-color: #181a1c;
 	box-shadow: 1px 1px 10px 1px #313940 inset;
 }
-.piano-key.piano-key-active,
+.piano-key.piano-key-active {
+	background-color: rgb(255, 255, 255);
+	transform: scale(0.96);
+}
 .piano-key.sharp.piano-key-active {
+	background-color: #181a1c;
+	box-shadow: 1px 1px 10px 1px #313940 inset;
 	transform: scale(0.96);
 }
 .piano-key.none {
