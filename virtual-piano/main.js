@@ -70,3 +70,14 @@ document.addEventListener('mouseup', ({ target }) => {
     removeActive(target);
   }
 });
+
+window.addEventListener('keydown', ({ repeat, code }) => {
+  if (repeat) return;
+  const letter = (code).slice(3);
+  const target = document.querySelector(`[data-letter="${letter}"]`);
+  if (!target) return;
+  target.classList.remove('piano-key-remove-mouse');
+  target.classList.add('piano-key-active');
+  const audioSrc = `./assets/audio/${target.dataset.note}.mp3`
+  playAudio(audioSrc);
+});
