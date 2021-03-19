@@ -16,6 +16,13 @@ const removeActive = (element) => {
   element.classList.remove('piano-key-active', 'piano-key-active-pseudo');
 };
 
+const addActiveForHold = ({ target, which}) => {
+  if (target.classList.contains('piano-key') && which) {
+    addActive(target);
+  }
+};
+
+
 const btnContainer = document.querySelector('.btn-container');
 const buttons = document.querySelectorAll('.btn');
 const piano = document.querySelector('.piano');
