@@ -63,3 +63,10 @@ piano.addEventListener('mousedown', ({ target }) => {
     addActive(target);
   }
 });
+
+document.addEventListener('mouseup', ({ target }) => {
+  piano.removeEventListener('mouseover', addActiveForHold);
+  if (target.classList.contains('piano-key')) {
+    removeActive(target);
+  }
+});
