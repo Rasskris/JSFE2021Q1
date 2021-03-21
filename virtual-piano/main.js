@@ -100,6 +100,6 @@ const toggleFullScreen = () => {
 };
 
 const btnFullScreen = document.querySelector('.fullscreen');
-btnFullScreen.addEventListener('click', (e) => {
+btnFullScreen.addEventListener('click', () => {
   toggleFullScreen();
 });
