@@ -19,7 +19,7 @@ const populateHtmlPlugins = (pagesArray) => {
   return res;
 };
 
-const pages = populateHtmlPlugins(["main", "map", "alligator", "gorilla", "eagle", "panda"]);
+const pages = populateHtmlPlugins(["index", "map", "alligator", "gorilla", "eagle", "panda"]);
 
 let mode = "development";
 let target = "web";
