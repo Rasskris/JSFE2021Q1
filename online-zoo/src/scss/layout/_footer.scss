@@ -1,0 +1,102 @@
+.footer {
+	margin-bottom: -195px;
+	background-color: #dff5b0;
+}
+.footer__container {
+	display: flex;
+	flex-direction: column;
+}
+.footer-part1 {
+	margin: 80px 0 63px 0;
+	display: flex;
+	align-items: flex-start;
+}
+.footer-part1__logo-link {
+	margin-right: 100px;
+	&:hover {
+		opacity: 0.65;
+	}
+}
+// .footer-part1__logo-img {
+// }
+.footer-part1__btn {
+	margin-right: 150px;
+	padding: 15px 28.5px;
+	border: none;
+}
+.footer-part1__nav {
+	margin-right: 123.35px;
+	display: flex;
+}
+.footer-part1__menu {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+.menu {
+	margin-right: 121px;
+}
+.menu__item {
+	.menu__item-link {
+		@include font-kit("Roboto", 300, normal, 18, 21, $black_color, left);
+		&:hover {
+			color: rgb(123, 196, 50);
+			text-shadow: -1px 0 $black_color, 0 1px $black_color, 1px 0 $black_color,
+				0 -1px $black_color;
+		}
+	}
+	&.b {
+		margin-bottom: 15px;
+	}
+}
+.footer-part1__socials {
+	display: flex;
+	column-gap: 10px;
+}
+.socials__icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	transition: 0.8s;
+	&.i {
+		background: url(../assets/icons/icon__insta.svg);
+	}
+	&.f {
+		background: url(../assets/icons/icon__facebook.svg);
+	}
+	&.t {
+		background: url(../assets/icons/icon__twitter.svg);
+	}
+	&.y {
+		background: url(../assets/icons/icon__youtube.svg);
+	}
+	&:hover {
+		opacity: 0.65;
+	}
+}
+.socials__icon-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.footer-part2 {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+}
+.footer-part2__schools-logos {
+	margin-right: 77px;
+	transition: none;
+	.schools-logos__rs {
+		margin-right: 57px;
+	}
+	// .schools-logo__yem {
+	// }
+}
+.footer-part2__info {
+	margin-right: 210px;
+	@include font-kit("Roboto", normal, normal, 18, 21, $black_color, left);
+}
+.footer-part2__author {
+	@include font-kit("Roboto", normal, normal, 18, 21, left);
+}
