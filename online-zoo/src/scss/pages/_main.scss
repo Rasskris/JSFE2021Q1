@@ -1,0 +1,331 @@
+// Watch-online styles start
+.watch-online {
+	width: 100%;
+	margin-top: -80px;
+	background-color: radial-gradient(
+		71.89% 152.21% at 40.1% 50%,
+		#b5e6ff 0%,
+		#59c3fb 100%
+	);
+	.wrapper {
+		background: url(../assets/images/pages/main/bg-panda.png) no-repeat top;
+	}
+}
+
+.watch-online__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.watch-online__title {
+	width: 570px;
+	margin-top: 210px;
+	margin-bottom: 50px;
+	@include font-kit(
+		"SceneW01-Black",
+		900,
+		"normal",
+		70,
+		84,
+		$black_color,
+		left
+	);
+	letter-spacing: 3%;
+}
+
+.watch-online__btn {
+	width: 233px;
+	padding: 15px 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 137px;
+}
+// Watch-online styles end
+
+// How-it-work styles start
+.how-work {
+	height: 963px;
+
+	.container {
+		width: 100%;
+		max-width: 1370px;
+		padding: 0 20px;
+		margin: 0 auto;
+	}
+}
+
+.how-work__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.how-work__title {
+	margin-top: 100px;
+	margin-bottom: 29px;
+	text-align: center;
+}
+
+.how-work__cards {
+	margin: 0 0 32px 0;
+	padding: 0;
+	width: 1365px;
+	height: 549px;
+	background: url(../assets/images/pages/main/bg__how-work.png) no-repeat center;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.cards__card-img_size_s {
+	width: 250px;
+	height: 350px;
+}
+.cards__card-img_size_m {
+	width: 300px;
+	height: 400px;
+	z-index: 2;
+}
+.cards__card-img_size_l {
+	width: 350px;
+	height: 450px;
+	z-index: 7;
+}
+.cards__card-img {
+	transform: scale(1.0623, 1.0001);
+	width: 100%;
+	height: 100%;
+}
+
+.how-work__desc {
+	margin: 0;
+	width: 933px;
+	height: 126px;
+	@include font-kit("Roboto", 400, "normal", 16, 20.8);
+	text-align: center;
+}
+// How-it-work styles end
+
+// Pets in zoo styles start
+.pets__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pets__title {
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.slider {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	column-gap: 20px;
+	margin-bottom: 50px;
+}
+
+.slider__btn {
+	width: 63px;
+	height: 63px;
+	padding: 0;
+	border: none;
+}
+
+.slider__btn_left {
+	background: url(../assets/images/svg/button_left.svg) no-repeat center;
+	transition: 0.8s;
+
+	&:hover {
+		cursor: pointer;
+		transform: translateX(-15px) scale(1.1, 1.1);
+		opacity: 0.75;
+	}
+}
+
+.slider__btn_right {
+	background: url(../assets/images/svg/button_right.svg) no-repeat center;
+	transition: 0.8s;
+
+	&:hover {
+		cursor: pointer;
+		transform: translateX(15px) scale(1.1, 1.1);
+		opacity: 0.75;
+	}
+}
+
+.pets-cards {
+	display: grid;
+	grid-template-columns: repeat(12, 64px);
+	grid-template-rows: repeat(2, 300px);
+	gap: 30px 20px;
+}
+
+.pets-cards__card {
+	position: relative;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-column: span 3;
+	grid-row: span 1;
+	transition: 0.8s all;
+
+	.pets-cards__card-pic {
+		width: 233px;
+		height: 300px;
+	}
+	.pets-cards__card-title {
+		position: absolute;
+		top: 15px;
+		bottom: 266px;
+		@include font-kit("Roboto", "normal", "normal", 16, 19, $white-color);
+	}
+	.pets-cards__card-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 4;
+	}
+	&:hover {
+		transform: scale(1.1, 1.1);
+	}
+}
+.pets__btn {
+	padding: 15px 60px;
+	margin-bottom: 100px;
+}
+// Pets in zoo styles end
+
+// Pay and feed styles start
+.pay-feed__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pay-feed__title {
+	margin: 100px 0 80px 0;
+}
+
+.info-cards {
+	width: 992px;
+	height: 273px;
+	position: relative;
+	display: flex;
+	margin-bottom: 100px;
+
+	.line {
+		position: absolute;
+		left: 260px;
+		z-index: 3;
+		width: 440px;
+		height: 200px;
+	}
+	.vector1 {
+		position: absolute;
+		top: 37px;
+		left: 418px;
+		z-index: 3;
+	}
+	.vector2 {
+		position: absolute;
+		top: 152px;
+		left: 688px;
+		z-index: 3;
+	}
+}
+
+.info-cards__card {
+	position: relative;
+	margin: 0;
+	width: 320px;
+	height: 276px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	.info-cards__card-desc {
+		position: absolute;
+		bottom: 0;
+		@include font-kit(
+			"Roboto",
+			"300",
+			"normal",
+			16,
+			19,
+			$black_color,
+			$text_center
+		);
+	}
+}
+// Pay and feed styles end
+
+// Testimonials styles start
+.testimonials__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.testimonials__title {
+	margin-bottom: 80px;
+}
+
+.testimonials-cards {
+	display: grid;
+	grid-template-columns: repeat(12, 64px);
+	grid-template-rows: 369px;
+	column-gap: 20px;
+}
+
+.testimonials-cards__card {
+	grid-column: span 3;
+	background-color: #a7e1ff;
+	display: flex;
+	flex-direction: column;
+}
+.card__person {
+	margin: 22px 20px 18px 20px;
+	display: flex;
+	align-items: center;
+
+	.person-info {
+		margin-left: 10px;
+		display: flex;
+		flex-direction: column;
+
+		.person-info__name {
+			margin-bottom: 4px;
+			@include font-kit("Roboto", 900, normal, 16, 19);
+		}
+		.person-info__donation {
+			display: flex;
+
+			.person-info__donation-img {
+				margin-right: 3px;
+			}
+			.person-info__donation-value {
+				@include font-kit("Roboto", 900, normal, 12, 14);
+			}
+		}
+	}
+}
+.card__feedback {
+	margin: 0 20px 30px 20px;
+	@include font-kit("Roboto", normal, normal, 16, 19, $black_color, left);
+}
+.testimonials__btn {
+	margin-bottom: 100px;
+	padding: 15px 60px;
+	border: none;
+}
+// Testimonials styles end
