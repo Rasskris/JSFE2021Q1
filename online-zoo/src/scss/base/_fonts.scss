@@ -1,0 +1,10 @@
+@include font("Roboto", "roboto-v20-latin-500", "500", "normal");
+@include font("Roboto", "roboto-v20-latin-regular", "400", "normal");
+
+@font-face {
+	font-family: "SceneW01-Black";
+	font-display: "swap";
+	font-style: "normal";
+	font-weight: 900;
+	src: local(""), url("../assets/fonts/SceneW01-Black.ttf") format("truetype");
+}
