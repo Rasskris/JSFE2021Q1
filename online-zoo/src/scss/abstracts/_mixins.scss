@@ -1,0 +1,28 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: "swap";
+		font-style: $style;
+		font-weight: $weight;
+		src: local(""), url("../assets/fonts/#{$file_name}.woff2") format("woff2"),
+			url("../assets/fonts/#{$file_name}.woff") format("woff");
+	}
+}
+
+@mixin font-kit(
+	$font_name,
+	$weight,
+	$style,
+	$size,
+	$line_height,
+	$color: $black_color,
+	$align: $text_center
+) {
+	font-family: $font_name;
+	font-weight: $weight;
+	font-style: $style;
+	font-size: $size * 1px;
+	line-height: $line_height * 1px;
+	color: $color;
+	text-align: $align;
+}
