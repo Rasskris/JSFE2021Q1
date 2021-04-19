@@ -4,82 +4,108 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online-zoo</title>
+  <title>Zoos Alligator</title>
 </head>
 <body>
   <!-- Header start -->
   <header class="header">
+    <h1 class="main-title">Online Zoo</h1>
     <div class="wrapper">
       <div class="header__container container">
         <a href="index.html" class="header__logo-link"><img class="header__logo-img" src="../assets/images/svg/logo.svg" alt="Logo"></a>
         <nav class="header__nav">
           <ul class="header__list list">
-            <li class="list__item"><a class="list__item-link" href="#!">About</a></li>
+            <li class="list__item"><a class="list__item-link" href="index.html">About</a></li>
             <li class="list__item"><a class="list__item-link" href="map.html">Map</a></li>
-            <li class="list__item"><a class="list__item-link list__item-link_active" href="panda.html">Zooz</a></li>
-            <li class="list__item"><a class="list__item-link" href="#!">Contuct us</a></li>
+            <li class="list__item"><a class="list__item-link list__item-link_active" href="panda.html">Zoos</a></li>
+            <li class="list__item"><a class="list__item-link" href="notfound.html">Contuct us</a></li>
             <li class="list__item"><a class="list__item-link" href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo">Design</a></li>
           </ul>
+          <div class="header__nav-close">
+            <span class="header__nav-close-line"></span>
+            <span class="header__nav-close-line"></span>
+          </div>
         </nav>
+        <div class="header__burger burger">
+          <span class="burger__line burger__line_first"></span>
+          <span class="burger__line burger__line_second"></span>
+          <span class="burger__line burger__line_third"></span>
+        </div>
       </div>
     </div>
   </header>
   <!-- Header end -->
 
   <main class="main">
-    <!-- Side bar start -->
+    <!-- Sidebar start -->
     <aside class="sidebar">
-    <div class="sidebar__wrapper">
-      <div class="sidebar__item alligator-item">
-        <a href="" class="alligator-item__link">
-          <img class="alligator-item__img" src="../assets/images/pages/map/alligator.png" alt="Alligator">
-        </a>
-        <span class="alligator-item__tooltip tooltip">ALLIGATOR, Florida, USA</span>
+      <button class="sidebar__btn"></button>
+      <div class="sidebar__wrapper">
+        <div class="sidebar__item alligator-item sidebar__item_active">
+          <a href="alligator.html" class="alligator-item__link link_hover">
+          </a>
+          <div class="alligator-item__tooltip tooltip">
+            <p class="tooltip__text">ALLIGATOR,</p>  
+            <p class="tooltip__text">Florida, USA</p>
+            <a href="alligator.html" class="tooltip__btn">Watch online</a> 
+          </div>
+        </div>
+        <div class="sidebar__item panda-item">
+          <a href="panda.html" class="panda-item__link link_hover">
+          </a>
+          <div class="panda-item__tooltip tooltip">
+            <p class="tooltip__text">PANDA,</p>  
+            <p class="tooltip__text">China</p> 
+            <a href="panda.html" class="tooltip__btn">Watch online</a> 
+          </div>
+        </div>
+        <div class="sidebar__item eagle-item">
+          <a href="eagle.html" class="eagle-item__link link_hover">
+          </a>
+          <div class="eagle-item__tooltip tooltip">
+            <p class="tooltip__text">EAGLE,</p>
+            <p class="tooltip__text">California, USA</p>
+            <a href="eagle.html" class="tooltip__btn">Watch online</a>  
+          </div>
+        </div>
+        <div class="sidebar__item gorilla-item">
+          <a href="gorilla.html" class="gorilla-item__link link_hover">
+          </a>
+          <div class="gorilla-item__tooltip tooltip">
+            <p class="tooltip__text">GORILLA,</p>  
+            <p class="tooltip__text">Eastern DRC</p>
+            <a href="gorilla.html" class="tooltip__btn">Watch online</a>
+          </div>
+        </div>
+        <div class="sidebar__item feed-item">
+          <a href="#!" class="feed-item__link link_hover"></a>
+        </div>
       </div>
-      <div class="sidebar__item panda-item">
-        <a href="" class="panda-item__link">
-          <img class="panda-item__img" src="../assets/images/pages/map/panda.png" alt="Panda">
-        </a>
-        <span class="panda-item__tooltip tooltip">PANDA, China</span>
-      </div>
-      <div class="sidebar__item eagle-item">
-        <a href="" class="eagle-item__link">
-          <img class="eagle-item__img" src="../assets/images/pages/map/eagle.png" alt="Eagle">
-        </a>
-        <span class="eagle-item__tooltip tooltip">EAGLE, California, USA</span>
-      </div>
-      <div class="sidebar__item gorilla-item">
-        <a href="" class="gorilla-item__link">
-          <img class="gorilla-item__img" src="../assets/images/pages/map/gorilla.png" alt="Gorilla">
-        </a>
-        <span class="gorilla-item__tooltip tooltip">GORILLA, Eastern DRC</span>
-      </div>
-      <div class="sidebar__item feed-item">
-        <img class="feed-item__img" src="../assets/images/panda-feed.png" alt="Panda">
-      </div>
-    </div>
     </aside>
-    <!-- Side bar end -->
+    <!-- Sidebar end -->
 
     <!-- Animal start -->
     <section class="animal-videos">
       <div class="wrapper">
-        <div class="animal-videos__container">
+        <div class="animal-videos__container container">
+          <h2 class="animal-videos__title">Alligator</h2>
           <div class="animal-videos__item_size_l">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="1160" height="653" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+         <div class="animal-videos_size_s">
+          <div class="animal-videos__item_size_s">
+            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="animal-videos__item_size_s">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="animal-videos__item_size_s">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="animal-videos__item_size_s">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+         </div>
         </div>
       </div>
     </section>
@@ -88,33 +114,42 @@
     <!-- Information start-->
     <article class="info">
       <div class="wrapper">
-        <div class="info__container">
-          <div class="info__item">
-            <p class="info__item-zoo"></p>
-            <p class="info__item-type"></p>
+        <div class="info__container container">
+          <div class="info__item-c sp-l">
+            <p class="info__item-zoo">ZOO: Alligator Farm Zoological Park in Florida (USA)</p>
+            <p class="info__item-type">ENCLOSURE TYPE: Imitation of the natural environment</p>
           </div>
-          <details class="info__item spoiler">
-            <summary class="spoiler__title">Population</summary>
-            <p class="spoiler__desc">There are now more than 1 million alligators in the wild.</p>
-          </details>
-          <details class="info__item spoiler">
-            <summary class="spoiler__title">Habitat</summary>
-            <p class="spoiler__desc">Alligators are almost exclusively found in freshwater rivers, lakes, marshes or swamps.</p>
-          </details>
-          <details class="info__item spoiler">
-            <summary class="spoiler__title">Nutrition</summary>
-            <p class="spoiler__desc">
-              These apex predators eat mostly fish, turtles, snakes, birds and small mammals. 
-              But alligators are known for being opportunists; when hungry, they will attack larger prey like deer or cattle.
-            </p>
-          </details>
-          <details class="info__item spoiler">
-            <summary class="spoiler__title">Interesting facts</summary>
-            <p class="spoiler__desc">
-              American alligators are typically between 10 and 15 feet long and can weigh 1,000 lbs.  
-              Despite being large and somewhat ungainly, alligators can run up to 11 mph on land--but they can't sustain that speed for very long.
-            </p>
-          </details>
+          <div class="spoiler-container">
+            <div class="info__item spoiler">
+              <p class="spoiler__title">Population</p>
+              <p class="spoiler__desc">There are now more than 1 million alligators in the wild.</p>
+              <button class="spoiler__btn"></button>
+            </div>
+            <div class="info__item spoiler">
+              <p class="spoiler__title">Nutrition</p>
+              <p class="spoiler__desc">
+                These apex predators eat mostly fish, turtles, snakes, birds and small mammals. 
+                But alligators are known for being opportunists; when hungry, they will attack larger prey like deer or cattle.
+              </p>
+              <button class="spoiler__btn"></button>
+            </div>
+          </div>
+          <div class="spoiler-container">
+            <div class="info__item spoiler spoiler_active">
+              <p class="spoiler__title">Habitat</p>
+              <p class="spoiler__desc spoiler__desc_active">Alligators are almost exclusively found in freshwater rivers, lakes, marshes or swamps.
+              </p>
+              <button class="spoiler__btn spoiler__btn_active"></button>
+            </div>
+            <div class="info__item spoiler spoiler_active">
+              <p class="spoiler__title">Interesting facts</p>
+              <p class="spoiler__desc spoiler__desc_active">
+                American alligators are typically between 10 and 15 feet long and can weigh 1,000 lbs.  
+                Despite being large and somewhat ungainly, alligators can run up to 11 mph on land--but they can't sustain that speed for very long.
+              </p>
+              <button class="spoiler__btn spoiler__btn_active"></button>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -127,7 +162,7 @@
     <div class="wrapper">
       <div class="footer__container container">
         <div class="footer-part1">
-          <a href="/" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/logo.svg" alt="Logo"></a>
+          <a href="index.html" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/footer-logo.svg" alt="Logo"></a>
           <button class="footer-part1__btn btn">Donate for volunteers</button>
           <nav class="footer-part1__nav">
             <ul class="footer-part1__menu menu">
@@ -135,7 +170,7 @@
               <li class="menu__item"><a href="map.html" class="menu__item-link">Map</a></li>
             </ul>
             <ul class="footer-part1__menu">
-              <li class="menu__item b"><a href="#!" class="menu__item-link">Contact us</a></li>
+              <li class="menu__item b"><a href="notfound.html" class="menu__item-link">Contact us</a></li>
               <li class="menu__item"><a href="#!" class="menu__item-link">Feedback</a></li>
             </ul>
           </nav>
@@ -151,7 +186,7 @@
             <img src="../assets/images/svg/footer__logo-rs.svg" alt="RS-School" class="schools-logos__rs" title="RS-School">
             <img src="../assets/images/svg/footer__logo-yem.svg" alt="Yem-Digital" class="schools-logo__yem" title="Yem-Digital">
           </div>
-          <p class="footer-part2__info">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</p>
+          <p class="footer-part2__info">Copyright ©RSSchool <span class="footer-part2__info-end">and</span> ©Yem Digital 2020 - 2021</p>
           <p class="footer-part2__author">Grigoreva Margarita</p>
         </div>
       </div>
@@ -176,7 +211,12 @@
   </div>
 
   <div class="popup-pay">
-
+    <form action="">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+    </form>
   </div>
   <!-- Pop-up end -->
 </body>
