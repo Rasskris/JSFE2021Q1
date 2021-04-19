@@ -11,14 +11,16 @@ html {
 }
 
 * {
-	transition: color 0.5s linear, background-color 0.5s linear;
+	transition: color 0.3s linear, background-color 0.5s linear;
 }
 
 a {
 	text-decoration: none;
 }
 
-ul {
+ul,
+p,
+figure {
 	margin: 0;
 	padding: 0;
 }
@@ -27,15 +29,24 @@ li {
 	list-style-type: none;
 }
 
+img,
+video,
+canvas {
+	max-width: 100%;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
+
 h2 {
 	margin: 0;
 	padding: 0;
-	@include font-kit("Roboto", "normal", "normal", 40, 46.88);
-}
-
-p {
-	margin: 0;
-	padding: 0;
+	@include font-kit("Roboto", 500, normal, 40, 46.88);
 }
 
 .wrapper {
@@ -49,4 +60,10 @@ p {
 	max-width: 1200px;
 	padding: 0 20px;
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 630px) {
+	.container {
+		padding: 0 10px;
+	}
 }

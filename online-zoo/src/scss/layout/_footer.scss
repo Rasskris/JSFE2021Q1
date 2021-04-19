@@ -1,6 +1,12 @@
 .footer {
-	margin-bottom: -195px;
-	background-color: #dff5b0;
+	// margin-bottom: -210px;
+	background-image: url(../assets/images/footer-bg.png);
+	background-position: top;
+	background-repeat: repeat-x;
+	padding-top: 70px;
+	.wrapper {
+		background-color: #dff5b0;
+	}
 }
 .footer__container {
 	display: flex;
@@ -9,10 +15,12 @@
 .footer-part1 {
 	margin: 80px 0 63px 0;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: flex-start;
 }
 .footer-part1__logo-link {
-	margin-right: 100px;
+	margin-right: 97px;
 	&:hover {
 		opacity: 0.65;
 	}
@@ -20,7 +28,7 @@
 // .footer-part1__logo-img {
 // }
 .footer-part1__btn {
-	margin-right: 150px;
+	margin-right: 160px;
 	padding: 15px 28.5px;
 	border: none;
 }
@@ -38,7 +46,7 @@
 }
 .menu__item {
 	.menu__item-link {
-		@include font-kit("Roboto", 300, normal, 18, 21, $black_color, left);
+		@include font-kit("Roboto", normal, normal, 18, 21, $black_color, left);
 		&:hover {
 			color: rgb(123, 196, 50);
 			text-shadow: -1px 0 $black_color, 0 1px $black_color, 1px 0 $black_color,
@@ -82,21 +90,168 @@
 .footer-part2 {
 	margin-bottom: 20px;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: flex-end;
 }
 .footer-part2__schools-logos {
-	margin-right: 77px;
+	margin-right: 72px;
 	transition: none;
 	.schools-logos__rs {
-		margin-right: 57px;
+		margin-right: 54px;
 	}
 	// .schools-logo__yem {
 	// }
 }
 .footer-part2__info {
 	margin-right: 210px;
+	padding-bottom: 5px;
 	@include font-kit("Roboto", normal, normal, 18, 21, $black_color, left);
 }
 .footer-part2__author {
+	padding-bottom: 5px;
 	@include font-kit("Roboto", normal, normal, 18, 21, left);
+}
+
+// Media queris start for max-width 1190px
+@media screen and (max-width: 1190px) {
+	.footer-part1__logo-link {
+		margin-right: 0;
+	}
+	.footer-part1__nav {
+		margin-right: 0;
+		column-gap: 55px;
+	}
+	.footer-part1__btn {
+		margin: 0;
+	}
+	.menu {
+		margin-right: 0;
+	}
+	.footer-part2__info {
+		margin-right: 0;
+	}
+}
+// Media queris end for max-width 1190px
+
+// Media queris start for max-width 710px
+@media screen and (max-width: 710px) {
+	.footer {
+		.wrapper {
+			padding-bottom: 57px;
+		}
+	}
+	.footer-part1 {
+		margin: 80px 0 0 0;
+	}
+	.footer-part1__logo-link {
+		order: 1;
+		margin-right: -8px;
+	}
+	.footer-part1__btn {
+		order: 5;
+		padding: 15px 16.5px;
+		transform: translate(395px, 48px);
+	}
+	.footer-part1__nav {
+		order: 2;
+		margin-right: 0;
+		column-gap: 55px;
+	}
+	.menu {
+		margin-right: 0;
+	}
+	.footer-part1__socials {
+		order: 3;
+	}
+	.footer-part2__schools-logos {
+		order: 4;
+		.schools-logos__rs {
+			margin-right: 72px;
+		}
+	}
+	.footer-part2__info {
+		order: 7;
+		margin-right: 0;
+		margin-bottom: 20px;
+		transform: translate(93px, 76px);
+	}
+	.footer-part2__author {
+		order: 6;
+		transform: translate(-220px, 70px);
+	}
+}
+// Media queris end for max-width 710px
+
+// Media queris start for max-width 630px
+@media screen and (max-width: 630px) {
+	.footer {
+		.wrapper {
+			padding-bottom: 57px;
+		}
+	}
+	.footer-part1,
+	.footer-part1__nav,
+	.footer-part1__menu,
+	.footer-part2 {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer-part1 {
+		margin: 80px auto 50px auto;
+		row-gap: 46px;
+	}
+	.footer-part1__logo-link {
+		order: 1;
+	}
+	.footer-part1__btn {
+		order: 3;
+		margin-bottom: 5px;
+		padding: 15px 16.5px;
+		transform: translate(0, 0);
+	}
+	.footer-part1__nav {
+		order: 2;
+		row-gap: 15px;
+	}
+	.footer-part1__socials {
+		order: 4;
+	}
+	.footer-part2__schools-logos {
+		order: 1;
+		margin-right: 0;
+		margin-bottom: 46px;
+		.schools-logos__rs {
+			margin-right: 57px;
+		}
+	}
+	.footer-part2__info {
+		order: 3;
+		margin-right: 0;
+		transform: translate(0, 0);
+		text-align: center;
+		padding: 0 38px;
+		.footer-part2__info-end {
+			display: none;
+		}
+	}
+	.footer-part2__author {
+		order: 2;
+		transform: translate(0, 0);
+		margin-bottom: 10px;
+	}
+}
+// Media queris end for max-width 630px
+
+@media screen and (max-width: 340px) {
+	.footer-part1__logo-img {
+		margin-right: 7px;
+	}
+	.footer-part1__btn {
+		padding: 17px 16.5px;
+	}
+	.footer-part2__author {
+		margin-bottom: 3px;
+	}
 }

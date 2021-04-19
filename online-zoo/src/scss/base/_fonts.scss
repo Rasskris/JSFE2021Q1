@@ -1,5 +1,8 @@
-@include font("Roboto", "roboto-v20-latin-500", "500", "normal");
-@include font("Roboto", "roboto-v20-latin-regular", "400", "normal");
+@include font("Roboto", "roboto-v20-latin-500", 500, normal);
+@include font("Roboto", "roboto-v20-latin-regular", 400, normal);
+@include font("Roboto", "roboto-v27-latin-300", 300, normal);
+
+@include font("Bebas Neue", "bebas-neue-v2-latin-regular", 400, normal);
 
 @font-face {
 	font-family: "SceneW01-Black";

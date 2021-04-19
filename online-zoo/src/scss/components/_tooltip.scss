@@ -1,0 +1,53 @@
+.sidebar__item {
+	position: relative;
+}
+.tooltip {
+	visibility: hidden;
+	position: absolute;
+	left: 60px;
+	bottom: 8px;
+	background: url(../assets/images/pages/bg_tooltip.png) no-repeat center;
+	width: 111px;
+	height: 47px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 4px;
+	z-index: 3;
+	.tooltip__text {
+		width: 101px;
+		margin-left: 10px;
+		@include font-kit("Roboto", normal, normal, 15, 19);
+	}
+	&.visible_active {
+		visibility: visible;
+	}
+}
+.tooltip__btn {
+	margin-left: 8px;
+	padding: 9.5px 21.5px;
+	width: 147px;
+	display: none;
+	border-radius: 30px;
+	background-color: #ffb600;
+	outline: none;
+	@include font-kit("Roboto", normal, normal, 18, 21);
+	&:hover {
+		background-color: rgb(245, 239, 77);
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.tooltip {
+		background: url(../assets/images/tooltip_bg.png) no-repeat center;
+		width: 178px;
+		height: 100px;
+		top: -18px;
+		left: 64px;
+	}
+	.tooltip__btn {
+		display: block;
+	}
+}

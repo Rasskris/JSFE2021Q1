@@ -1,14 +1,16 @@
 // Watch-online styles start
 .watch-online {
 	width: 100%;
-	margin-top: -80px;
-	background-color: radial-gradient(
+	margin: -80px auto 0 auto;
+	background: radial-gradient(
 		71.89% 152.21% at 40.1% 50%,
 		#b5e6ff 0%,
 		#59c3fb 100%
 	);
 	.wrapper {
-		background: url(../assets/images/pages/main/bg-panda.png) no-repeat top;
+		background-image: url(../assets/images/pages/main/bg-panda.png);
+		background-position: top;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -31,29 +33,37 @@
 		$black_color,
 		left
 	);
-	letter-spacing: 3%;
+	line-height: 120%;
+	letter-spacing: 0.03em;
 }
 
 .watch-online__btn {
 	width: 233px;
 	padding: 15px 60px;
+	margin-bottom: 137px;
+}
+.watch-online__btn-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 137px;
+}
+.btn__icon {
+	width: 17px;
+	height: 18px;
+	margin-right: 6px;
+	background: url(../assets/images/svg/btn_play.svg) no-repeat center;
 }
 // Watch-online styles end
 
 // How-it-work styles start
 .how-work {
-	height: 963px;
-
 	.container {
 		width: 100%;
 		max-width: 1370px;
 		padding: 0 20px;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 }
 
@@ -69,43 +79,60 @@
 	text-align: center;
 }
 
+.wrapper-cards {
+	width: 100vw;
+	height: 549px;
+	margin-bottom: 32px;
+	background-image: url(../assets/images/pages/main/bg__how-work.png);
+	background-position-x: center;
+}
+
 .how-work__cards {
-	margin: 0 0 32px 0;
+	margin: 0 auto;
 	padding: 0;
 	width: 1365px;
+	// width: 100%;
 	height: 549px;
-	background: url(../assets/images/pages/main/bg__how-work.png) no-repeat center;
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
+	.cards__card {
+		width: 250px;
+		height: 350px;
+	}
 }
-.cards__card-img_size_s {
-	width: 250px;
-	height: 350px;
-}
+
 .cards__card-img_size_m {
-	width: 300px;
-	height: 400px;
+	z-index: 1;
+}
+
+.cards__card-img_size_l {
 	z-index: 2;
 }
-.cards__card-img_size_l {
-	width: 350px;
-	height: 450px;
-	z-index: 7;
-}
 .cards__card-img {
-	transform: scale(1.0623, 1.0001);
 	width: 100%;
 	height: 100%;
 }
+.img-panda {
+	transform: matrix(1.4, 0, 0, 1.29, -1, 2);
+}
+.img-tiger {
+	transform: matrix(1.2, 0, 0, 1.147, -27, 1);
+}
+.img-monkey {
+	transform: matrix(1.2, 0, 0, 1.15, 25, 3);
+}
 
 .how-work__desc {
-	margin: 0;
-	width: 933px;
+	margin-bottom: 100px;
+	width: 919px;
 	height: 126px;
-	@include font-kit("Roboto", 400, "normal", 16, 20.8);
+	@include font-kit("Roboto", 400, normal, 16, 21.8);
 	text-align: center;
+}
+.how-work__desc-link {
+	text-decoration: underline;
 }
 // How-it-work styles end
 
@@ -118,7 +145,7 @@
 
 .pets__title {
 	text-align: center;
-	margin-bottom: 80px;
+	margin: 100px 0 82px 0;
 }
 
 .slider {
@@ -126,7 +153,10 @@
 	padding: 0;
 	display: flex;
 	flex-wrap: nowrap;
+	justify-content: center;
 	align-items: center;
+	gap: 30px 20px;
+	row-gap: 30px;
 	column-gap: 20px;
 	margin-bottom: 50px;
 }
@@ -136,6 +166,7 @@
 	height: 63px;
 	padding: 0;
 	border: none;
+	outline: none;
 }
 
 .slider__btn_left {
@@ -152,7 +183,6 @@
 .slider__btn_right {
 	background: url(../assets/images/svg/button_right.svg) no-repeat center;
 	transition: 0.8s;
-
 	&:hover {
 		cursor: pointer;
 		transform: translateX(15px) scale(1.1, 1.1);
@@ -178,14 +208,13 @@
 	transition: 0.8s all;
 
 	.pets-cards__card-pic {
-		width: 233px;
 		height: 300px;
 	}
 	.pets-cards__card-title {
 		position: absolute;
 		top: 15px;
 		bottom: 266px;
-		@include font-kit("Roboto", "normal", "normal", 16, 19, $white-color);
+		@include font-kit("Roboto", 400, normal, 16, 19, $white-color);
 	}
 	.pets-cards__card-link {
 		position: absolute;
@@ -217,67 +246,70 @@
 }
 
 .info-cards {
-	width: 992px;
-	height: 273px;
 	position: relative;
+	// width: 85%;
 	display: flex;
-	margin-bottom: 100px;
-
-	.line {
-		position: absolute;
-		left: 260px;
-		z-index: 3;
-		width: 440px;
-		height: 200px;
-	}
-	.vector1 {
-		position: absolute;
-		top: 37px;
-		left: 418px;
-		z-index: 3;
-	}
-	.vector2 {
-		position: absolute;
-		top: 152px;
-		left: 688px;
-		z-index: 3;
-	}
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto 89px auto;
+}
+.line1920-1 {
+	position: absolute;
+	bottom: 221px;
+	left: 303px;
+}
+.line1920-2 {
+	position: absolute;
+	top: 160px;
+	left: 663px;
+}
+.line640-1,
+.line640-2,
+.line320-1,
+.line320-2 {
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
 }
 
 .info-cards__card {
-	position: relative;
-	margin: 0;
 	width: 320px;
 	height: 276px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-
-	.info-cards__card-desc {
-		position: absolute;
-		bottom: 0;
-		@include font-kit(
-			"Roboto",
-			"300",
-			"normal",
-			16,
-			19,
-			$black_color,
-			$text_center
-		);
-	}
+	justify-content: center;
+	align-items: center;
+	row-gap: 15px;
+	margin-left: 50px;
+	margin-top: 10px;
 }
+.info-cards__card-desc {
+	@include font-kit("Roboto", 400, normal, 16, 19, $black_color, $text_center);
+}
+// .figure-credit {
+// 	padding-right: 35px;
+// 	padding-top: 19px;
+// }
+// .figure-zoos {
+// 	margin-left: 30px;
+// 	margin-right: 30px;
+// }
+// .figure-panda {
+// 	padding-right: 20px;
+// 	padding-bottom: 10px;
+// }
 // Pay and feed styles end
 
 // Testimonials styles start
 .testimonials__container {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
 .testimonials__title {
-	margin-bottom: 80px;
+	margin: 100px 0 80px 0;
 }
 
 .testimonials-cards {
@@ -305,7 +337,7 @@
 
 		.person-info__name {
 			margin-bottom: 4px;
-			@include font-kit("Roboto", 900, normal, 16, 19);
+			@include font-kit("Roboto", 500, normal, 15, 19, $black_color, start);
 		}
 		.person-info__donation {
 			display: flex;
@@ -324,8 +356,357 @@
 	@include font-kit("Roboto", normal, normal, 16, 19, $black_color, left);
 }
 .testimonials__btn {
-	margin-bottom: 100px;
+	margin-bottom: 29px;
 	padding: 15px 60px;
 	border: none;
 }
 // Testimonials styles end
+
+// Media queries start for max-width: 1400px
+@media screen and (max-width: 1400px) {
+	.watch-online {
+		.wrapper {
+			background-position-x: -343px;
+		}
+	}
+	.how-work {
+		.container {
+			width: 100%;
+			max-width: 1200px;
+			// padding: 0 20px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+	}
+	.how-work__cards {
+		width: 100%;
+		max-width: 1200px;
+		padding: 0 20px;
+	}
+	.img-eagle {
+		transform: matrix(1.08, 0, 0, 1, 4, 3);
+	}
+	.img-tiger {
+		transform: matrix(1.3, 0, 0, 1.15, -22, 2);
+	}
+	.img-panda {
+		transform: matrix(1.51, 0, 0, 1.29, 0, 3);
+	}
+	.img-monkey {
+		transform: matrix(1.3, 0, 0, 1.15, 22, 2);
+	}
+	.img-elephant {
+		transform: matrix(1.1, 0, 0, 1, -7, 2);
+	}
+}
+// Media queries end for max-width: 1400px
+
+// Media queries start for max-width: 1169px
+@media screen and (max-width: 1193px) {
+	.wrapper-cards {
+		width: auto;
+	}
+	.how-work__desc {
+		width: auto;
+		height: auto;
+	}
+
+	.pets-cards {
+		display: grid;
+		grid-template-columns: repeat(12, 32px);
+		grid-template-rows: repeat(2, 300px);
+		gap: 30px 20px;
+	}
+	.pets-cards__card {
+		grid-column: span 4;
+	}
+	.pets-cards__card:nth-child(4n) {
+		display: none;
+	}
+
+	// .info-cards__card {
+	// 	margin: 0;
+	// }
+	// .line1920-1,
+	// .line1920-2 {
+	// 	display: none;
+	// }
+	// .line640-1 {
+	// 	left: calc(100% - 60%);
+	// 	bottom: calc(100% - 6%);
+	// 	visibility: visible;
+	// }
+	// .line640-2 {
+	// 	left: calc(100% - 33%);
+	// 	bottom: calc(100% - 81%);
+	// 	visibility: visible;
+	// }
+	.info-cards__card-desc {
+		width: 192px;
+		height: 65px;
+	}
+
+	.testimonials-cards {
+		display: grid;
+		grid-template-columns: repeat(12, 32px);
+		grid-template-rows: 429px;
+		column-gap: 20px;
+	}
+	.card {
+		grid-column: span 4;
+	}
+	.card:last-child {
+		display: none;
+	}
+	.card__person {
+		align-items: flex-start;
+	}
+}
+// Media queries end for max-width: 1169px
+
+@media screen and (max-width: 1149px) {
+	// .info-cards__card {
+	// 	margin: 0;
+	// }
+	.line1920-1,
+	.line1920-2 {
+		display: none;
+	}
+	.line640-1 {
+		left: calc(100% - 60%);
+		bottom: calc(100% - 6%);
+		visibility: visible;
+	}
+	.line640-2 {
+		left: calc(100% - 33%);
+		bottom: calc(100% - 81%);
+		visibility: visible;
+	}
+}
+
+// Media queries start for max-width: 810px
+@media screen and (max-width: 810px) {
+	.info-cards__card {
+		width: 263px;
+		margin: 0;
+	}
+	.slider {
+		flex-wrap: wrap;
+	}
+}
+//// Media queries start for max-width: 810px
+
+// Media queries start for max-width: 720px
+@media screen and (max-width: 720px) {
+	.header__logo-link {
+		margin-right: 49px;
+	}
+	.watch-online {
+		.wrapper {
+			background-position-x: -774px;
+			background-position-y: 9px;
+		}
+	}
+	.watch-online__title {
+		width: 414px;
+		margin-top: 152px;
+		margin-bottom: 50px;
+		@include font-kit(
+			"SceneW01-Black",
+			900,
+			normal,
+			50,
+			60,
+			$black_color,
+			left
+		);
+		letter-spacing: 3%;
+	}
+	.watch-online__btn {
+		width: 187px;
+		padding: 15px 64.5px;
+		margin-bottom: 268px;
+	}
+
+	.img-panda {
+		transform: matrix(1.51, 0, 0, 1.29, 0, 3);
+	}
+	.how-work__desc {
+		line-height: 21px;
+	}
+
+	.pets__title {
+		margin: 124px 0 80px 0;
+	}
+	.slider {
+		flex-wrap: wrap;
+	}
+	.slider__btn_left {
+		order: 7;
+	}
+	.slider__btn_right {
+		order: 8;
+	}
+
+	.pay-feed__title {
+		margin: 100px 0 113px 0;
+	}
+	.info-cards {
+		width: auto;
+	}
+	.info-cards__card {
+		height: auto;
+		row-gap: 20px;
+		.info-cards__card-img {
+			width: auto;
+		}
+		.info-cards__card-desc {
+			width: 191px;
+			height: 73px;
+		}
+	}
+	.line640-1 {
+		left: calc(100% - 65%);
+		bottom: calc(100% - 3%);
+	}
+	.line640-2 {
+		left: calc(100% - 31%);
+		bottom: calc(100% - 70%);
+	}
+	.testimonials__title {
+		margin: 94px 0 80px 6px;
+	}
+	.testimonials__btn {
+		margin-bottom: 32px;
+		padding: 15px 50px;
+	}
+}
+// Media queries end for max-width: 720px
+
+// Media queries start for max-width: 545px
+@media screen and (max-width: 545px) {
+	.watch-online {
+		.wrapper {
+			background-position-x: -865px;
+			background-position-y: 0;
+		}
+	}
+	.watch-online__title {
+		width: 220px;
+	}
+	.watch-online__btn {
+		margin-bottom: 149px;
+		width: 220px;
+		padding: 14px 77px;
+	}
+	.zindex-1 {
+		z-index: 1;
+	}
+	.zindex-2 {
+		z-index: 2;
+	}
+	.zindex-3 {
+		z-index: 3;
+	}
+	.img-eagle {
+		transform: matrix(0.6, 0, 0, 0.615, 524, -81);
+		z-index: 2;
+	}
+	.img-tiger {
+		transform: matrix(0.69, 0, 0, 0.615, 163, -116);
+		z-index: 1;
+	}
+	.img-panda {
+		transform: matrix(0.6, 0, 0, 0.615, -59, 85);
+	}
+	.img-monkey {
+		transform: matrix(0.69, 0, 0, 0.615, -163, 119);
+	}
+	.img-elephant {
+		display: none;
+	}
+
+	.pets__title {
+		margin: 80px 0 80px 0;
+	}
+	.pets-cards {
+		display: grid;
+		grid-template-columns: repeat(4, 60px);
+		grid-template-rows: repeat(2, 300px);
+		gap: 30px 20px;
+	}
+	.pets-cards__card {
+		overflow: hidden;
+		grid-column: span 2;
+		.pets-cards__card-pic {
+			max-width: max-content;
+			transform: translateX(-21px);
+		}
+		.pets-cards__card-title {
+			font-weight: 300;
+			padding: 0 25px;
+		}
+	}
+	.pets-cards__card:nth-child(4n),
+	.bear-card,
+	.owl-card {
+		display: none;
+	}
+	.panda-card {
+		.pets-cards__card-pic {
+			transform: translateX(17px);
+		}
+	}
+	.pets__btn {
+		padding: 15px 67px;
+	}
+
+	.pay-feed__title {
+		margin: 100px 0 102px 0;
+	}
+	.info-cards {
+		row-gap: 82px;
+	}
+	.line1920-1,
+	.line1920-2 {
+		display: none;
+	}
+	.line640-1,
+	.line640-2 {
+		display: none;
+	}
+	.line320-1 {
+		visibility: visible;
+		left: calc(100% - 53%);
+		bottom: calc(100% - 35.5%);
+	}
+	.line320-2 {
+		visibility: visible;
+		left: calc(100% - 53%);
+		bottom: calc(100% - 71.5%);
+	}
+	.info-cards__card-desc {
+		width: 192px;
+		height: 65px;
+	}
+	.testimonials-cards {
+		display: grid;
+		grid-template-columns: repeat(4, 60px);
+		grid-template-rows: auto;
+		row-gap: 20px;
+	}
+	.card {
+		grid-column: span 4;
+		.card__feedback {
+			margin: 0 20px 23px 20px;
+		}
+	}
+	.card:last-child,
+	.card:nth-child(3n) {
+		display: none;
+	}
+	.card__person {
+		align-items: flex-start;
+	}
+}
+// Media queries end for max-width: 630px
