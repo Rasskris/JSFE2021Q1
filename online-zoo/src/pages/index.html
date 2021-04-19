@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online-zoo</title>
+  <title>Online-zoo main page</title>
 </head>
 <body>
   <!-- Header start -->
   <header class="header">
+    <h1 class="main-title">Online Zoo</h1>
     <div class="wrapper">
       <div class="header__container container">
         <a href="index.html" class="header__logo-link"><img class="header__logo-img" src="../assets/images/svg/logo.svg" alt="Logo"></a>
@@ -16,11 +17,20 @@
           <ul class="header__list list">
             <li class="list__item"><a class="list__item-link list__item-link_active" href="#!">About</a></li>
             <li class="list__item"><a class="list__item-link" href="map.html">Map</a></li>
-            <li class="list__item"><a class="list__item-link" href="panda.html">Zooz</a></li>
-            <li class="list__item"><a class="list__item-link" href="#!">Contuct us</a></li>
+            <li class="list__item"><a class="list__item-link" href="panda.html">Zoos</a></li>
+            <li class="list__item"><a class="list__item-link" href="notfound.html">Contuct us</a></li>
             <li class="list__item"><a class="list__item-link" href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo">Design</a></li>
           </ul>
+          <div class="header__nav-close">
+            <span class="header__nav-close-line"></span>
+            <span class="header__nav-close-line"></span>
+          </div>
         </nav>
+        <div class="header__burger burger">
+          <span class="burger__line burger__line_first"></span>
+          <span class="burger__line burger__line_second"></span>
+          <span class="burger__line burger__line_third"></span>
+        </div>
       </div>
     </div>
   </header>
@@ -34,7 +44,12 @@
           <h2 class="watch-online__title">
             Watch your favorite animal ONLINE
           </h2>
-          <a href="panda.html" class="watch-online__btn btn">Play</a>
+          <a href="panda.html" class="watch-online__btn btn">
+            <div class="watch-online__btn-container">
+              <span class="btn__icon"></span>
+              <span class="btn__text">Play</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -45,17 +60,29 @@
       <div class="wrapper">
         <div class="how-work__container container">
           <h2 class="how-work__title">How it works</h2>
-          <ul class="how-work__cards cards">
-            <li class="cards__card cards__card-img_size_s"><img class="cards__card-img" src="../assets/images/pages/main/card__eagle.png" alt="Eagle"></li>
-            <li class="cards__card cards__card-img_size_m"><img class="cards__card-img" src="../assets/images/pages/main/card__tiger.png" alt="Tiger"></li>
-            <li class="cards__card cards__card-img_size_l"><img class="cards__card-img" src="../assets/images/pages/main/card__panda.png" alt="Panda"></li>
-            <li class="cards__card cards__card-img_size_m"><img class="cards__card-img" src="../assets/images/pages/main/card__monkey.png" alt="Monkey"></li>
-            <li class="cards__card cards__card-img_size_s"><img class="cards__card-img" src="../assets/images/pages/main/card__elephant.png" alt="Elephant"></li>
-          </ul>
+          <div class="wrapper-cards">
+            <ul class="how-work__cards cards">
+              <li class="cards__card cards__card-img_size_s zindex-2">
+                <img class="cards__card-img img-eagle" src="../assets/images/pages/main/card__eagle.png" alt="Eagle">
+              </li>
+              <li class="cards__card cards__card-img_size_m zindex-1">
+                <img class="cards__card-img img-tiger" src="../assets/images/pages/main/card__tiger.png" alt="Tiger">
+              </li>
+              <li class="cards__card cards__card-img_size_l zindex-3">
+                <img class="cards__card-img img-panda" src="../assets/images/pages/main/card__panda.png" alt="Panda">
+              </li>
+              <li class="cards__card cards__card-img_size_m zindex-1">
+                <img class="cards__card-img img-monkey" src="../assets/images/pages/main/card__monkey.png" alt="Monkey">
+              </li>
+              <li class="cards__card cards__card-img_size_s">
+                <img class="cards__card-img img-elephant" src="../assets/images/pages/main/card__elephant.png" alt="Elephant">
+              </li>
+            </ul>
+          </div>
           <p class="how-work__desc">
             The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live.
             Currently, under video-surveillance are pandas in China, eagles on Catalina Island (USA), alligators in Florida and gorillas in the Congo. We are expanding our capabilities and soon online you will meet Arctic snowy owl in Alaska, Penguin in California, Elephant from South Africa and Polar bear from Canada. You will see unique video-shots at any time of the day. If you liked a pet you watch and you want to please it with a delicious treat, you can pay a donation and the animal will receive a surprise from you during feeding hours.
-            We want to thank you for helping the animals and give you <a href="#!">discount coupons</a> from our partners.
+            We want to thank you for helping the animals and give you <a class="how-work__desc-link" href="#!">discount coupons</a> from our partners.
           </p>
         </div>
       </div>
@@ -70,42 +97,42 @@
           <div class="slider">
             <button class="slider__btn slider__btn_left"></button>
             <div class=" slider__cards pets-cards">
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card panda-card">
                 <img src="../assets/images/pages/main/slider__panda.png" alt="Panda" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Panda, China</figcaption>
                 <a href="panda.html" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card alligator-card">
                 <img src="../assets/images/pages/main/slider__alligator.png" alt="Alligator" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Alligator, USA</figcaption>
                 <a href="alligator.html" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card gorilla-card">
                 <img src="../assets/images/pages/main/slider__corilla.png" alt="Gorilla" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Gorilla, Eastern DRC</figcaption>
                 <a href="gorilla.html" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card elephant-card">
                 <img src="../assets/images/pages/main/slider__elephant.png" alt="Elephant" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Elephant, South Africa</figcaption>
                 <a href="#!" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card bear-card">
                 <img src="../assets/images/pages/main/slider__bear.png" alt="Polar bear" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Polar bear, Canada</figcaption>
                 <a href="#!" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card eagle-card">
                 <img src="../assets/images/pages/main/slider__eagle.png" alt="Bald eagle" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Bald eagle, USA</figcaption>
                 <a href="eagle.html" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card owl-card">
                 <img src="../assets/images/pages/main/slider__owl.png" alt="Arctic snowy owl" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Arctic snowy owl, Alaska</figcaption>
                 <a href="#!" class="pets-cards__card-link"></a>
               </figure>
-              <figure class="pets-cards__card">
+              <figure class="pets-cards__card penguin-card">
                 <img src="../assets/images/pages/main/slider__pinguin.png" alt="Penguin" class="pets-cards__card-pic">
                 <figcaption class="pets-cards__card-title">Penguin, USA</figcaption>
                 <a href="#!" class="pets-cards__card-link"></a>
@@ -125,23 +152,26 @@
         <div class="pay-feed__container container">
           <h2 class="pay-feed__title">Pay and feed</h2>
           <div class="pay-feed__cards info-cards">
-            <img class="line" src="../assets/images/svg/line.svg" alt="">
-            <img class="vector1" src="../assets/images/svg/line__vector-1.svg" alt="">
-            <img class="vector2" src="../assets/images/svg/line__vector-2.svg" alt="">
+            <img class="line1920-1" src="../assets/images/pages/main/arrow1920-1.png" alt="">
+            <img class="line1920-2" src="../assets/images/pages/main/arrow1920-2.png" alt="">
+            <img class="line640-1" src="../assets/images/pages/main/arrow640-1.png" alt="">
+            <img class="line640-2" src="../assets/images/pages/main/arrow640-2.png" alt="">
+            <img class="line320-1" src="../assets/images/pages/main/arrow320-1.png" alt="">
+            <img class="line320-2" src="../assets/images/pages/main/arrow320-2.png" alt="">
             <figure class="info-cards__card">
-              <img src="../assets/images/pages/main/pay_cards.jpeg" alt="Credit/Defit card" class="info-cards__card-img">
+              <img src="../assets/images/pages/main/pay-feed-card.png" alt="Credit/Defit card" class="info-cards__card-img figure-credit">
               <figcaption class="info-cards__card-desc">
                 You can pay for a donation to any animal using your Credit/Debit card
               </figcaption>
             </figure>
-            <figure class="info-cards__card">
-              <img src="../assets/images/pages/main/pay_zooz.jpeg" alt="Zooz" class="info-cards__card-img">
+            <figure class="info-cards__card figure-zoos">
+              <img src="../assets/images/pages/main/pay-feed-zoos.png" alt="Zooz" class="info-cards__card-img">
               <figcaption class="info-cards__card-desc">
                 Donations will go to the account of the zoo or nature reserve
               </figcaption>
             </figure>
             <figure class="info-cards__card">
-              <img src="../assets/images/pages/main/pay_panda.jpeg" alt="Panda" class="info-cards__card-img">
+              <img src="../assets/images/pages/main/pay-feed-panda.png" alt="Panda" class="info-cards__card-img figure-panda">
               <figcaption class="info-cards__card-desc">
                 The animal will receive a delicious treat during feeding hours
               </figcaption>
@@ -157,12 +187,12 @@
       <div class="wrapper">
         <div class="testimonials__container container">
           <h2 class="testimonials__title">Testimonials</h2>
-          <div class="slider">
+          <div class="testimonials__slider slider">
             <button class="slider__btn slider__btn_left"></button>
             <div class="testimonials-cards">
-              <article class="testimonials-cards__card card">
+              <article class="testimonials-cards__card card person1">
                 <div class="card__person">
-                  <img src="../assets/images/svg/testimonials1.svg" alt="Avatar" class="card__person-img">
+                  <img src="../assets/images/pages/main/testimonials__img-1.png" alt="Avatar" class="card__person-img">
                   <div class="card__person-info person-info">
                     <p class="person-info__name">Karen Maitland</p>
                     <div class="person-info__donation">
@@ -177,9 +207,9 @@
                   I cannot see myself ever being able to come up there to see them in person, so this is a great substitute. Thank you again."
                 </p>
               </article>
-              <article class="testimonials-cards__card card">
+              <article class="testimonials-cards__card card person2">
                 <div class="card__person">
-                  <img src="../assets/images/svg/testimonials2.svg" alt="Avatar" class="card__person-img">
+                  <img src="../assets/images/pages/main/testimonials__img-2.png" alt="Avatar" class="card__person-img">
                   <div class="card__person-info person-info">
                     <p class="person-info__name">Sara Jones</p>
                     <div class="person-info__donation">
@@ -193,9 +223,9 @@
                   I really enjoy all the live cams and can spend HOURS watching real-time entertainment. Wild life style!"
                 </p>
               </article>
-              <article class="testimonials-cards__card card">
+              <article class="testimonials-cards__card card person3">
                 <div class="card__person">
-                  <img src="../assets/images/svg/testimonials3.svg" alt="Avatar" class="card__person-img">
+                  <img src="../assets/images/pages/main/testimonials__img-3.png" alt="Avatar" class="card__person-img">
                   <div class="card__person-info person-info">
                     <p class="person-info__name">Alex Barden</p>
                     <div class="person-info__donation">
@@ -209,9 +239,9 @@
                   ever leaving the comfort of my office chair. Jammies on and coffee cup in hand, I am Phineas Fogg!!"
                 </p>
               </article>
-              <article class="testimonials-cards__card card">
+              <article class="testimonials-cards__card card person4">
                 <div class="card__person">
-                  <img src="../assets/images/svg/testimonials4.svg" alt="Avatar" class="card__person-img">
+                  <img src="../assets/images/pages/main/testimonials__img-4.png" alt="Avatar" class="card__person-img">
                   <div class="card__person-info person-info">
                     <p class="person-info__name">Alene Ray</p>
                     <div class="person-info__donation">
@@ -240,7 +270,7 @@
     <div class="wrapper">
       <div class="footer__container container">
         <div class="footer-part1">
-          <a href="/" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/logo.svg" alt="Logo"></a>
+          <a href="index.html" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/footer-logo.svg" alt="Logo"></a>
           <button class="footer-part1__btn btn">Donate for volunteers</button>
           <nav class="footer-part1__nav">
             <ul class="footer-part1__menu menu">
@@ -248,7 +278,7 @@
               <li class="menu__item"><a href="map.html" class="menu__item-link">Map</a></li>
             </ul>
             <ul class="footer-part1__menu">
-              <li class="menu__item b"><a href="#!" class="menu__item-link">Contact us</a></li>
+              <li class="menu__item b"><a href="notfound.html" class="menu__item-link">Contact us</a></li>
               <li class="menu__item"><a href="#!" class="menu__item-link">Feedback</a></li>
             </ul>
           </nav>
@@ -264,7 +294,7 @@
             <img src="../assets/images/svg/footer__logo-rs.svg" alt="RS-School" class="schools-logos__rs" title="RS-School">
             <img src="../assets/images/svg/footer__logo-yem.svg" alt="Yem-Digital" class="schools-logo__yem" title="Yem-Digital">
           </div>
-          <p class="footer-part2__info">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</p>
+          <p class="footer-part2__info">Copyright ©RSSchool <span class="footer-part2__info-end">and</span> ©Yem Digital 2020 - 2021</p>
           <p class="footer-part2__author">Grigoreva Margarita</p>
         </div>
       </div>
