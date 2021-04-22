@@ -259,6 +259,7 @@ img {
 	right: -5px;
 	letter-spacing: 0;
 }
+
 @media (max-width: 1024px) {
 	.main {
 		padding-top: 40px;
@@ -296,6 +297,7 @@ img {
 		height: 40px;
 	}
 }
+
 @media (max-width: 375px) {
 	.btn {
 		min-width: 145px;
