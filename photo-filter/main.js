@@ -24,3 +24,11 @@ const getTimesOfDay = () => {
 
   return timesOfDay;
 };
+
+const filters = document.querySelector('.filters');
+filters.addEventListener('input', ({ target }) => {
+  const siblingEl = target.nextElementSibling;
+  siblingEl.value = target.value;
+  const suffix = target.dataset.sizing || '';
+  document.documentElement.style.setProperty(`--${target.name}`, `${target.value}${suffix}`);
+});
