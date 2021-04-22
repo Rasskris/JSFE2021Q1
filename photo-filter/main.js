@@ -44,3 +44,33 @@ const handleReset = () => {
     filterOutput.value = value;
   });
 };
+
+const images = ['01', '02', '03', '05', '06', '07', '08', '09', '10',
+  '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+];
+
+let imgIndex = 0;
+
+const viewImage = (img) => {
+  const currentImg = document.querySelector('img');
+  img.addEventListener('load', () => {
+    currentImg.replaceWith(img);
+    imgIndex += 1;
+  });
+  img.addEventListener('error', () => {
+    const errMsg = document.createElement('output');
+    errMsg.value = `Error. Image can not be loaded.`;
+    document.querySelector('.editor').append(errMsg);
+  });
+};
+
+const handleNext = () => {
+  const imgNum = imgIndex % images.length;
+  const timesOfDay = getTimesOfDay();
+  const imgSrc = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timesOfDay}/${images[imgNum]}.jpg`;
+  const nextImg = new Image();
+  nextImg.crossOrigin = 'anonymous';
+  nextImg.alt = 'Sample Image';
+  nextImg.src = imgSrc;
+  viewImage(nextImg);
+};
