@@ -74,3 +74,14 @@ const handleNext = () => {
   nextImg.src = imgSrc;
   viewImage(nextImg);
 };
+
+const handleLoad = ({ target }) => {
+  const file = target.files[0];
+  const reader = new FileReader();
+  reader.onload = function() {
+    const img = new Image();
+    img.src = reader.result;
+    viewImage(img);
+  };
+  reader.readAsDataURL(file);
+};
