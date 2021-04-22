@@ -145,3 +145,18 @@ btnContainer.addEventListener('click', ({ target }) => {
     handleSave();
   }
 });
+
+const toggleFullScreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+};
+
+const btnFullScreen = document.querySelector('.fullscreen');
+btnFullScreen.addEventListener('click', () => {
+  toggleFullScreen();
+});
