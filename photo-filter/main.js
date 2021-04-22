@@ -32,3 +32,15 @@ filters.addEventListener('input', ({ target }) => {
   const suffix = target.dataset.sizing || '';
   document.documentElement.style.setProperty(`--${target.name}`, `${target.value}${suffix}`);
 });
+
+const handleReset = () => {
+  const { filter } = initState;
+  Object.keys(filter).forEach((prop) => {
+    const { value, suffix } = filter[prop];
+    document.documentElement.style.setProperty(`--${prop}`, `${value}${suffix}`);
+    const filterInput = document.querySelector(`input[name=${prop}]`);
+    filterInput.value = value;
+    const filterOutput = filterInput.nextElementSibling;
+    filterOutput.value = value;
+  });
+};
