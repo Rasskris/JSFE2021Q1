@@ -45,7 +45,7 @@ const handleReset = () => {
   });
 };
 
-const images = ['01', '02', '03', '05', '06', '07', '08', '09', '10',
+const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
   '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
 ];
 
@@ -67,6 +67,7 @@ const viewImage = (img) => {
 const handleNext = () => {
   const imgNum = imgIndex % images.length;
   const timesOfDay = getTimesOfDay();
+  console.log(images[imgNum]);
   const imgSrc = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timesOfDay}/${images[imgNum]}.jpg`;
   const nextImg = new Image();
   nextImg.crossOrigin = 'anonymous';
