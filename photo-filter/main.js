@@ -85,3 +85,37 @@ const handleLoad = ({ target }) => {
   };
   reader.readAsDataURL(file);
 };
+
+const handleSave = () => {
+  const canvas = document.createElement('canvas');
+  const currentImg = document.querySelector('img');
+  const image = new Image();
+  image.crossOrigin = 'anonymous';
+  image.src = currentImg.src;
+  image.onload = function() {
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    const styles = window.getComputedStyle(currentImg);
+    context.filter = getStyles(currentImg.width, currentImg.height, image.width, image.height, styles);
+    context.drawImage(image, 0, 0);
+    const link = document.createElement('a');
+    link.download = 'download-image.png';
+    link.href = canvas.toDataURL('image/png', 1.0);
+    link.click();
+  };
+};
+
+const btnContainer = document.querySelector('.btn-container');
+btnContainer.addEventListener('click', ({ target }) => {
+  if (target.classList.contains('btn-reset')) {
+    handleReset();
+  } else if (target.classList.contains('btn-next')) {
+    handleNext();
+  } else if (target.classList.contains('btn-load--input')) {
+    target.value = '';
+    target.addEventListener('change', handleLoad)
+  } else if (target.classList.contains('btn-save')) {
+    handleSave();
+  }
+});
