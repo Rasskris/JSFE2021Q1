@@ -86,6 +86,32 @@ const handleLoad = ({ target }) => {
   reader.readAsDataURL(file);
 };
 
+// Из-за того, что ф-р blur нужно умножать на коэфф-т, получение знaч-й ф-ра для канвас пришлось вынести в отд-ю ф-ю.
+const getFilterValues = (currentW, currentH, realW, realH, currentStyles) => {
+  let ratio;
+  if (realH > realW) {
+    ratio = realH / currentH;
+  } else {
+    ratio = realW / currentW;
+  }
+  let values = '';
+  Object.keys(initState.filter).forEach((nameValue) => {
+    if (nameValue === 'blur') {
+      const currentValue = currentStyles.getPropertyValue(`--${nameValue}`);
+      const processedValue = Math.floor(Number.parseInt(currentValue) * ratio);
+      values = `${values}${nameValue}(${processedValue}px) `;
+    } else if (nameValue === 'hue') {
+      const currentValue = currentStyles.getPropertyValue(`--${nameValue}`);
+      values = `${values}${nameValue}-rotate(${currentValue}) `;
+    } else {
+      const currentValue = currentStyles.getPropertyValue(`--${nameValue}`);
+      const processedValue = Number.parseInt(currentValue) / 100;
+      values = `${values}${nameValue}(${processedValue}) `;
+    }
+  });
+  return values.trimEnd();
+};
+
 const handleSave = () => {
   const canvas = document.createElement('canvas');
   const currentImg = document.querySelector('img');
@@ -97,7 +123,7 @@ const handleSave = () => {
     canvas.height = image.height;
     const context = canvas.getContext('2d');
     const styles = window.getComputedStyle(currentImg);
-    context.filter = getStyles(currentImg.width, currentImg.height, image.width, image.height, styles);
+    context.filter = getFilterValues(currentImg.width, currentImg.height, image.width, image.height, styles);
     context.drawImage(image, 0, 0);
     const link = document.createElement('a');
     link.download = 'download-image.png';
