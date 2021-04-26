@@ -45,17 +45,10 @@ const handleReset = () => {
   });
 };
 
-const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
-  '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-];
-
-let imgIndex = 0;
-
 const viewImage = (img) => {
   const currentImg = document.querySelector('img');
   img.addEventListener('load', () => {
     currentImg.replaceWith(img);
-    imgIndex += 1;
   });
   img.addEventListener('error', () => {
     const errMsg = document.createElement('output');
@@ -64,16 +57,21 @@ const viewImage = (img) => {
   });
 };
 
+const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
+  '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+];
+
+let imgIndex = 0;
 const handleNext = () => {
   const imgNum = imgIndex % images.length;
   const timesOfDay = getTimesOfDay();
-  console.log(images[imgNum]);
   const imgSrc = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timesOfDay}/${images[imgNum]}.jpg`;
   const nextImg = new Image();
   nextImg.crossOrigin = 'anonymous';
   nextImg.alt = 'Sample Image';
   nextImg.src = imgSrc;
   viewImage(nextImg);
+  imgIndex += 1;
 };
 
 const handleLoad = ({ target }) => {
@@ -90,11 +88,8 @@ const handleLoad = ({ target }) => {
 // Из-за того, что ф-р blur нужно умножать на коэфф-т, получение знaч-й ф-ра для канвас пришлось вынести в отд-ю ф-ю.
 const getFilterValues = (currentW, currentH, realW, realH, currentStyles) => {
   let ratio;
-  if (realH > realW) {
-    ratio = realH / currentH;
-  } else {
-    ratio = realW / currentW;
-  }
+  ratio = realH > realW ? realH / currentH : realW / currentW;
+  ratio = ratio < 1 ? ratio * 2 : Math.floor(ratio);
   let values = '';
   Object.keys(initState.filter).forEach((nameValue) => {
     if (nameValue === 'blur') {
@@ -135,13 +130,22 @@ const handleSave = () => {
 
 const btnContainer = document.querySelector('.btn-container');
 btnContainer.addEventListener('click', ({ target }) => {
+  const currentActive = btnContainer.querySelector('.btn-active');
+  if (target.classList.contains('btn-load--input')) {
+    currentActive.classList.remove('btn-active');
+    const label = target.closest('.btn');
+    label.classList.add('btn-active');
+    target.value = '';
+    target.addEventListener('change', handleLoad);
+    return;
+  }
+  if (!target.classList.contains('btn')) return;
+  currentActive.classList.remove('btn-active');
+  target.classList.add('btn-active');
   if (target.classList.contains('btn-reset')) {
     handleReset();
   } else if (target.classList.contains('btn-next')) {
     handleNext();
-  } else if (target.classList.contains('btn-load--input')) {
-    target.value = '';
-    target.addEventListener('change', handleLoad)
   } else if (target.classList.contains('btn-save')) {
     handleSave();
   }
@@ -156,6 +160,18 @@ const toggleFullScreen = () => {
     }
   }
 };
+
+let btnActive;
+btnContainer.addEventListener('mousedown', ({ target }) => {
+  btnActive = target;
+  target.classList.add('btn_active');
+});
+document.addEventListener('mouseup', () => {
+  if (btnActive) {
+    btnActive.classList.remove('btn_active');
+    btnActive = null;
+  }
+});
 
 const btnFullScreen = document.querySelector('.fullscreen');
 btnFullScreen.addEventListener('click', () => {
