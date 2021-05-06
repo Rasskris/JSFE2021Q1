@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="sidebar__item feed-item">
-        <a href="#!" class="feed-item__link link_hover"></a>
+        <a href="#!" class="feed-item__link link_hover" data-modal="donat"></a>
       </div>
     </div>
     </aside>
@@ -89,22 +89,33 @@
       <div class="wrapper">
         <div class="animal-videos__container container">
           <h2 class="animal-videos__title">Panda</h2>
-          <div class="animal-videos__item_size_l">
+          <div class="animal-videos__item_size_l" data-video="https://www.youtube.com/embed/OObOQ2GElhA" data-image="https://i.ytimg.com/vi/OObOQ2GElhA/hqdefault_live.jpg">
             <iframe width="1160" height="653" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <button class="animal__button btn">Feed</button>
          <div class="animal-videos_size_s">
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <div class="video-wrapper">
+           <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/WR9qY3-feHM" data-image="https://i.ytimg.com/vi_webp/WR9qY3-feHM/maxresdefault.webp">
+             <span class="video-btn"></span>
+           </div>
+           <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/DqoYaHXB-b4" data-image="https://i.ytimg.com/vi_webp/DqoYaHXB-b4/maxresdefault.webp">
+             <span class="video-btn"></span>
+           </div>
+           <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/D0eqnda8dOk" data-image="https://i.ytimg.com/vi/D0eqnda8dOk/maxresdefault_live.jpg">
+             <span class="video-btn"></span>
+           </div>
+           <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/65JHo3Cy2tY" data-image="https://i.ytimg.com/vi/65JHo3Cy2tY/maxresdefault_live.jpg">
+             <span class="video-btn"></span>
+           </div>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/yYp_Shk7XcI" data-image="https://i.ytimg.com/vi_webp/yYp_Shk7XcI/maxresdefault.webp">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/D7xWXk5T3-g" data-image="https://i.ytimg.com/vi/D7xWXk5T3-g/sddefault.jpg">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/wPTN0Wfgjg0" data-image="https://i.ytimg.com/vi_webp/wPTN0Wfgjg0/maxresdefault.webp">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
          </div>
         </div>
@@ -136,25 +147,24 @@
             </div>
           </div>
           <div class="spoiler-container">
-            <div class="info__item spoiler spoiler_active">
+            <div class="info__item spoiler">
               <p class="spoiler__title">Habitat</p>
-              <p class="spoiler__desc spoiler__desc_active">Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few provinces of southwestern China.
+              <p class="spoiler__desc">Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few provinces of southwestern China.
               </p>
-              <button class="spoiler__btn spoiler__btn_active "></button>
+              <button class="spoiler__btn"></button>
             </div>
-            <div class="info__item spoiler spoiler_active ">
+            <div class="info__item spoiler">
               <p class="spoiler__title">Interesting facts</p>
-              <p class="spoiler__desc spoiler__desc_active">
+              <p class="spoiler__desc">
                 Bamboo is indispensable for the big panda, 99% of their food is made up of shoots and leaves of the plant. Bamboo does not have a high nutritional value. And to meet the daily energy requirement, pandas need to eat between 23 and 40 kg of evergreen per day.
               </p>
-              <button class="spoiler__btn spoiler__btn_active"></button>
+              <button class="spoiler__btn"></button>
             </div>
           </div>
         </div>
       </div>
     </article>
     <!-- Information end -->
-
   </main>
 
   <!-- Footer start -->
@@ -163,7 +173,7 @@
       <div class="footer__container container">
         <div class="footer-part1">
           <a href="index.html" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/footer-logo.svg" alt="Logo"></a>
-          <button class="footer-part1__btn btn">Donate for volunteers</button>
+          <button class="footer-part1__btn btn btn-donate" data-modal="donat">Donate for volunteers</button>
           <nav class="footer-part1__nav">
             <ul class="footer-part1__menu menu">
               <li class="menu__item b"><a href="index.html" class="menu__item-link">About</a></li>
@@ -171,7 +181,7 @@
             </ul>
             <ul class="footer-part1__menu">
               <li class="menu__item b"><a href="notfound.html" class="menu__item-link">Contact us</a></li>
-              <li class="menu__item"><a href="#!" class="menu__item-link">Feedback</a></li>
+              <li class="menu__item"><a href="#!" class="menu__item-link btn-feedback" data-modal="feedback">Feedback</a></li>
             </ul>
           </nav>
           <ul class="footer-part1__socials socials">
@@ -195,28 +205,73 @@
   <!-- Footer end -->
 
   <!-- Pop-up start -->
-  <div class="popup-donat">
-    <form action="" class="popup-donat__form form">
-      <select class="form__select-animal" name="Alligator" id="">
+  <div class="feedback modal">
+    <div class="modal__wrapper">
+    <form action="" class="feedback__form form">
+      <span class="feedback__close close" title="Close Modal">&times;</span>
+      <input class="feedback__name" type="text" placeholder="Name" name="name" required>
+      <input class="feedback__email" type="email" placeholder="Email" name="email" required>
+      <textarea class="feedback__text" name="text" id="" cols="30" rows="10" placeholder="Your text here (300 max)" required></textarea>
+      <button type="submit" class="feedback__btn btn">Submit</button>
+    </form>
+    </div>
+  </div>
+
+  <div class="donat modal">
+    <div class="modal__wrapper">
+    <form action="" class="donat__form form">
+      <span class="donat__close close" title="Close Modal">&times;</span>
+      <select class="donat__select" value="" name="animals" placeholder="Choose animal" id="">
         <option value="Alligator">Alligator</option>
-        <option value="Panda">Panda</option>
+        <option value="Panda" selected>Panda</option>
         <option value="Eagle">Eagle</option>
         <option value="Gorilla">Gorilla</option>
       </select>
-      <input class="form__input-amount" type="text">
-      <input class="form__input-currency" type="text">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button class="form__btn-donat"></button>
+      <div class="donat__money">
+        <input class="donat__amount" type="number" placeholder="Amount" name="amount" required>
+        <select class="donat__currency" name="currency" id="">
+          <option value="usd" selected>USD</option>
+          <option value="eur">EUR</option>
+        </select>
+      </div>
+      <textarea class="donat__text" name="text" id="" cols="30" rows="4" placeholder="Your text here"></textarea>
+      <button class="donat__btn btn" disabled>Next</button>
     </form>
+    </div>
   </div>
 
-  <div class="popup-pay">
-    <form action="">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
+  <div class="pay modal">
+    <div class="modal__wrapper">
+    <form action="" class="pay__form form">
+      <span class="pay__close close" title="Close Modal">&times;</span>
+      <div class="pay__card-front">
+        <input type="number" class="pay__cardnumber" placeholder="Card Number" name="cardnumber" required>
+        <div class="pay__date">
+          <input type="number" class="pay__month" placeholder="MM" name="month" required>
+          <input type="number" class="pay__year" placeholder="YY" name="year" required>
+        </div>
+        <input type="text" class="pay__cardholder" placeholder="Cardholder Name" name="cardholder" required>
+      </div>
+      <div class="pay__card-back">
+        <span class="line bold"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+        <input class="pay__cvc" type="number" placeholder="CVC" name="cvc" required>
+      </div>
+      <button class="pay__btn btn" type="submit">Donat</button>
     </form>
+    </div>
+  </div>
+
+  <div class="gratitude modal">
+    <div class="modal__wrapper">
+    <div class="gratitude__container">
+      <span class="gratitude__close close" title="Close Modal">&times;</span>
+      <p class="gratitude__text">Thank you for your donation</p>
+    </div>
+    </div>
   </div>
   <!-- Pop-up end -->
 </body>

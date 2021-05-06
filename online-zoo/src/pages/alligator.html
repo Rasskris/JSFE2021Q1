@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="sidebar__item feed-item">
-          <a href="#!" class="feed-item__link link_hover"></a>
+          <a href="#!" class="feed-item__link link_hover" data-modal="donat"></a>
         </div>
       </div>
     </aside>
@@ -89,21 +89,33 @@
       <div class="wrapper">
         <div class="animal-videos__container container">
           <h2 class="animal-videos__title">Alligator</h2>
-          <div class="animal-videos__item_size_l">
+          <div class="animal-videos__item_size_l" data-video="https://www.youtube.com/embed/EnxRJii_dp8" data-image="https://i.ytimg.com/vi/EnxRJii_dp8/hqdefault_live.jpg">
             <iframe width="1160" height="653" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+          <button class="animal__button btn">Feed</button>
          <div class="animal-videos_size_s">
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrapper">
+          <div class="animal-videos__item_size_s" data-video='https://www.youtube.com/embed/WRJNtVD5EAg' data-image="https://i.ytimg.com/vi_webp/WRJNtVD5EAg/maxresdefault.webp">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/Z7W-KyU0O2E" data-image="https://i.ytimg.com/vi_webp/Z7W-KyU0O2E/sddefault.webp">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/7-u-tFuDb_M" data-image="https://i.ytimg.com/vi_webp/7-u-tFuDb_M/maxresdefault.webp">
+            <span class="video-btn"></span>
           </div>
-          <div class="animal-videos__item_size_s">
-            <iframe width="275" height="155" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/FylXXMKLPoc" data-image="https://i.ytimg.com/vi_webp/FylXXMKLPoc/sddefault.webp">
+            <span class="video-btn"></span>
+          </div>
+          <div class="animal-videos__item_size_s" data-video='https://www.youtube.com/embed/d0Izef1rvF4' data-image="https://i.ytimg.com/vi/d0Izef1rvF4/sddefault.jpg">
+            <span class="video-btn"></span>
+          </div>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/boQgZGj9Umg" data-image="https://i.ytimg.com/vi/boQgZGj9Umg/maxresdefault.jpg">
+            <span class="video-btn"></span>
+          </div>
+          <div class="animal-videos__item_size_s" data-video="https://www.youtube.com/embed/jgKPhHzLT04" data-image="https://i.ytimg.com/vi_webp/jgKPhHzLT04/maxresdefault.webp">
+            <span class="video-btn"></span>
+          </div>
           </div>
          </div>
         </div>
@@ -135,26 +147,25 @@
             </div>
           </div>
           <div class="spoiler-container">
-            <div class="info__item spoiler spoiler_active">
+            <div class="info__item spoiler">
               <p class="spoiler__title">Habitat</p>
-              <p class="spoiler__desc spoiler__desc_active">Alligators are almost exclusively found in freshwater rivers, lakes, marshes or swamps.
+              <p class="spoiler__desc">Alligators are almost exclusively found in freshwater rivers, lakes, marshes or swamps.
               </p>
-              <button class="spoiler__btn spoiler__btn_active"></button>
+              <button class="spoiler__btn"></button>
             </div>
-            <div class="info__item spoiler spoiler_active">
+            <div class="info__item spoiler">
               <p class="spoiler__title">Interesting facts</p>
-              <p class="spoiler__desc spoiler__desc_active">
+              <p class="spoiler__desc">
                 American alligators are typically between 10 and 15 feet long and can weigh 1,000 lbs.  
                 Despite being large and somewhat ungainly, alligators can run up to 11 mph on land--but they can't sustain that speed for very long.
               </p>
-              <button class="spoiler__btn spoiler__btn_active"></button>
+              <button class="spoiler__btn"></button>
             </div>
           </div>
         </div>
       </div>
     </article>
     <!-- Information end -->
-
   </main>
 
   <!-- Footer start -->
@@ -163,7 +174,7 @@
       <div class="footer__container container">
         <div class="footer-part1">
           <a href="index.html" class="footer-part1__logo-link"><img class="footer-part1__logo-img" src="../assets/images/svg/footer-logo.svg" alt="Logo"></a>
-          <button class="footer-part1__btn btn">Donate for volunteers</button>
+          <button class="footer-part1__btn btn btn-donate" data-modal="donat">Donate for volunteers</button>
           <nav class="footer-part1__nav">
             <ul class="footer-part1__menu menu">
               <li class="menu__item b"><a href="index.html" class="menu__item-link">About</a></li>
@@ -171,7 +182,7 @@
             </ul>
             <ul class="footer-part1__menu">
               <li class="menu__item b"><a href="notfound.html" class="menu__item-link">Contact us</a></li>
-              <li class="menu__item"><a href="#!" class="menu__item-link">Feedback</a></li>
+              <li class="menu__item"><a href="#!" class="menu__item-link btn-feedback" data-modal="feedback">Feedback</a></li>
             </ul>
           </nav>
           <ul class="footer-part1__socials socials">
@@ -195,28 +206,73 @@
   <!-- Footer end -->
 
   <!-- Pop-up start -->
-  <div class="popup-donat">
-    <form action="" class="popup-donat__form form">
-      <select class="form__select-animal" name="Alligator" id="">
-        <option value="Alligator">Alligator</option>
+  <div class="feedback modal">
+    <div class="modal__wrapper">
+    <form action="" class="feedback__form form">
+      <span class="feedback__close close" title="Close Modal">&times;</span>
+      <input class="feedback__name" type="text" placeholder="Name" name="name" required>
+      <input class="feedback__email" type="email" placeholder="Email" name="email" required>
+      <textarea class="feedback__text" name="text" id="" cols="30" rows="10" placeholder="Your text here (300 max)" required></textarea>
+      <button type="submit" class="feedback__btn btn">Submit</button>
+    </form>
+    </div>
+  </div>
+
+  <div class="donat modal">
+    <div class="modal__wrapper">
+    <form action="" class="donat__form form">
+      <span class="donat__close close" title="Close Modal">&times;</span>
+      <select class="donat__select" value="" name="animals" placeholder="Choose animal" id="">
+        <option value="Alligator" selected>Alligator</option>
         <option value="Panda">Panda</option>
         <option value="Eagle">Eagle</option>
         <option value="Gorilla">Gorilla</option>
       </select>
-      <input class="form__input-amount" type="text">
-      <input class="form__input-currency" type="text">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button class="form__btn-donat"></button>
+      <div class="donat__money">
+        <input class="donat__amount" type="number" placeholder="Amount" name="amount" required>
+        <select class="donat__currency" name="currency" id="">
+          <option value="usd" selected>USD</option>
+          <option value="eur">EUR</option>
+        </select>
+      </div>
+      <textarea class="donat__text" name="text" id="" cols="30" rows="4" placeholder="Your text here"></textarea>
+      <button class="donat__btn btn" disabled>Next</button>
     </form>
+    </div>
   </div>
 
-  <div class="popup-pay">
-    <form action="">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
+  <div class="pay modal">
+    <div class="modal__wrapper">
+    <form action="" class="pay__form form">
+      <span class="pay__close close" title="Close Modal">&times;</span>
+      <div class="pay__card-front">
+        <input type="number" class="pay__cardnumber" placeholder="Card Number" name="cardnumber" required>
+        <div class="pay__date">
+          <input type="number" class="pay__month" placeholder="MM" name="month" required>
+          <input type="number" class="pay__year" placeholder="YY" name="year" required>
+        </div>
+        <input type="text" class="pay__cardholder" placeholder="Cardholder Name" name="cardholder" required>
+      </div>
+      <div class="pay__card-back">
+        <span class="line bold"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+         <span class="line thin"></span>
+        <input class="pay__cvc" type="number" placeholder="CVC" name="cvc" required>
+      </div>
+      <button class="pay__btn btn" type="submit">Donat</button>
     </form>
+    </div>
+  </div>
+
+  <div class="gratitude modal">
+    <div class="modal__wrapper">
+    <div class="gratitude__container">
+      <span class="gratitude__close close" title="Close Modal">&times;</span>
+      <p class="gratitude__text">Thank you for your donation</p>
+    </div>
+    </div>
   </div>
   <!-- Pop-up end -->
 </body>
