@@ -1,10 +1,16 @@
+.animal-videos {
+	margin: 0 auto;
+}
+.info {
+	margin: 0 auto;
+}
 .animal-videos__container {
 	margin: 0 auto;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 26px;
+	margin-bottom: 9px;
 }
 
 .animal-videos__title {
@@ -18,10 +24,41 @@ iframe {
 }
 .animal-videos_size_s {
 	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 1160px;
+	// display: flex;
+	// overflow: hidden;
+	// flex-wrap: nowrap;
+	// align-items: flex-start;
+	.video-wrapper {
+		display: flex;
+		top: 0;
+		position: relative;
+		width: 5000px;
+	}
+}
+.animal-videos__item_size_s {
+	width: 275px;
+	height: 155px;
+	margin-right: 20px;
+	margin-bottom: 17px;
+	background-position: center;
+	background-size: cover;
 	display: flex;
-	flex-wrap: nowrap;
-	align-items: flex-start;
-	gap: 17px 20px;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		cursor: pointer;
+	}
+	.video-btn {
+		width: 35px;
+		height: 35px;
+		background-image: url(../assets/images/video_play-btn.png);
+	}
+}
+.animal-videos__item_size_s:last-child {
+	margin-right: 0;
 }
 .animal__button {
 	display: none;
@@ -50,7 +87,9 @@ iframe {
 	grid-column: span 7;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+}
+.spoiler:nth-child(odd) {
+	margin-bottom: 20px;
 }
 .spoiler {
 	height: 61px;
@@ -60,11 +99,17 @@ iframe {
 	}
 	.spoiler__title {
 		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 	.spoiler__desc {
 		font-size: 15.5px;
 		visibility: hidden;
 		animation-delay: 0ms, 500ms;
+		&:hover {
+			cursor: pointer;
+		}
 		&.spoiler__desc_active {
 			visibility: visible;
 		}
@@ -83,14 +128,14 @@ iframe {
 		background-size: contain;
 		border-radius: 50%;
 		border: none;
-		transition: all 0.4s;
+		transition: all 0.2s;
 		&:hover {
 			cursor: pointer;
 			opacity: 0.85;
 		}
 		&.spoiler__btn_active {
 			transform: rotate(180deg);
-			top: 48px;
+			top: 40%;
 		}
 	}
 }
@@ -117,7 +162,12 @@ iframe {
 			height: 167px;
 		}
 	}
-
+	.animal-videos__item_size_s:nth-child(odd) {
+		margin-right: 20px;
+	}
+	.animal-videos__item_size_s:nth-child(even) {
+		margin-right: 0;
+	}
 	.info__container {
 		width: 600px;
 		padding: 0;
@@ -183,7 +233,7 @@ iframe {
 			}
 			&.spoiler__btn_active {
 				transform: rotate(180deg);
-				top: 48px;
+				top: 40%;
 			}
 		}
 	}
@@ -280,7 +330,7 @@ iframe {
 			}
 			&.spoiler__btn_active {
 				transform: rotate(180deg);
-				top: 88px;
+				top: 40%;
 			}
 		}
 	}

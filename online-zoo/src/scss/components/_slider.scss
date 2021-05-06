@@ -1,0 +1,127 @@
+.slider {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.slider__wrapper-1 {
+	overflow: hidden;
+	position: relative;
+	width: $slider-width;
+	z-index: 1;
+	margin-right: 20px;
+}
+.slider__wrapper-2 {
+	display: flex;
+	position: relative;
+	top: 0;
+	left: -$slider-width;
+	width: 10000px;
+}
+.slider__wrapper-2.shifting {
+	transition: left 0.3s ease-out;
+}
+.pets-cards {
+	width: $slider-width;
+	height: $slider-height;
+	transition: all 1s;
+}
+// .slider__item {
+// 	margin-right: 20px;
+// }
+.slider__item:last-child {
+	margin-right: 0;
+}
+.slider__btn {
+	width: 63px;
+	height: 63px;
+	padding: 0;
+	border: none;
+	outline: none;
+	&:active {
+		transform: scale(0.8);
+	}
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.1, 1.1);
+		filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+	}
+}
+.slider__btn_left {
+	margin-right: 20px;
+	order: -1;
+	background: url(../assets/images/svg/button_left.svg) no-repeat center;
+	transition: 0.8s;
+}
+.slider__btn_right {
+	background: url(../assets/images/svg/button_right.svg) no-repeat center;
+	transition: 0.8s;
+}
+.testimonials__slider {
+	.slider__cards {
+		margin-right: 20px;
+		transition: all ease-in-out 1.4s;
+		-webkit-animation-name: slider__cards;
+		-webkit-animation-duration: 1.5s;
+		animation-name: slider__cards;
+		animation-duration: 1.5s;
+	}
+	.slider__cards_hidden {
+		display: none;
+	}
+	@-webkit-keyframes slider__cards {
+		from {
+			opacity: 0.3;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes slider__cards {
+		from {
+			opacity: 0.3;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+// Media styles start
+@media screen and (max-width: 750px) {
+	.slider {
+		flex-wrap: wrap;
+	}
+	.slider__item:first-child {
+		order: 1;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	.slider__btn_left {
+		order: 2;
+	}
+	.slider__btn_right {
+		order: 3;
+	}
+}
+
+@media screen and (max-width: 610px) {
+	.slider__btn_left {
+		order: 0;
+	}
+	.slider__item:nth-child(2n) {
+		margin-right: 20px;
+	}
+}
+@media screen and (max-width: 490px) {
+	.slider__btn_left {
+		order: 7;
+	}
+	.slider__item:nth-child(2n) {
+		margin-right: 0;
+	}
+}
+// Media styles end

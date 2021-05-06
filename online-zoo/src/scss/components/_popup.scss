@@ -1,7 +1,7 @@
-.popup-donat {
-	visibility: hidden;
+.modal {
+	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	z-index: 100; /* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -9,16 +9,237 @@
 	overflow: auto; /* Enable scroll if needed */
 	background-color: rgb(0, 0, 0); /* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4);
+	&__wrapper {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 0;
+	}
 }
-.popup-pay {
-	visibility: hidden;
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.4);
+
+.form,
+.gratitude__container {
+	position: relative;
+	width: 630px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fefefe;
+	opacity: 1;
+	-webkit-animation: form-animate 0.6s;
+	animation: form-animate 0.6s;
+	@include font-kit("Roboto", normal, normal, 16, 19);
+}
+.close {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	font-size: 28px;
+	font-weight: 100;
+	color: #0c0c0c;
+	&:hover,
+	&:focus {
+		color: #f44336;
+		cursor: pointer;
+	}
+}
+@-webkit-keyframes form-animate {
+	from {
+		-webkit-transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+	}
+}
+@keyframes form-animate {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+.feedback {
+	&__form {
+		padding: 50px 80px;
+	}
+	&__name,
+	&__email {
+		height: 40px;
+		margin-bottom: 8px;
+		background-color: $main-background;
+	}
+	&__text {
+		margin-bottom: 20px;
+		background-color: $main-background;
+	}
+	&__name::placeholder,
+	&__email::placeholder,
+	&__text::placeholder {
+		color: $placeholder-color;
+		padding: 6px;
+	}
+	&__btn {
+		margin: 0 auto;
+		padding: 9.5px 60px;
+	}
+}
+.donat__form,
+.pay__form {
+	padding: 60px 80px 40px 80px;
+}
+.donat {
+	&__select {
+		margin-bottom: 8px;
+		background: #dff5b0;
+		border: $form-border;
+		box-sizing: border-box;
+		padding: 10px 194px;
+	}
+	&__money {
+		display: flex;
+		margin-bottom: 8px;
+	}
+	&__amount {
+		padding: 8px 10px;
+		margin-right: 8px;
+		flex-grow: 3;
+		border: $form-border;
+	}
+	&__currency {
+		flex-grow: 1;
+		padding-left: 10%;
+		border: $form-border;
+	}
+	&__text {
+		padding: 8px 10px;
+		border: $form-border;
+	}
+	&__btn {
+		width: 168px;
+		margin: 20px auto 0 auto;
+		padding: 9.5px 60px;
+	}
+}
+.pay {
+	&__form {
+		height: 389px;
+		position: relative;
+	}
+	&__card-front {
+		position: absolute;
+		padding: 35px 26px;
+		display: flex;
+		flex-direction: column;
+		width: 358px;
+		height: 203px;
+		background: linear-gradient(0deg, #dcdcdc, #dcdcdc),
+			linear-gradient(0deg, #dcdcdc, #dcdcdc), #dcdcdc;
+		border-radius: 10px;
+		transform: translate(-5%, -8%);
+		z-index: 2;
+	}
+	&__card-back {
+		position: absolute;
+		width: 326px;
+		height: 189px;
+		background: #c6c5c5;
+		border-radius: 10px;
+		transform: translate(55%, 15%);
+	}
+	&__date {
+		display: flex;
+	}
+	&__month,
+	&__year {
+		margin-right: 5px;
+		width: 80px;
+	}
+
+	&__month,
+	&__year,
+	&__cardnumber,
+	&__cardholder {
+		height: 39px;
+		margin-bottom: 8px;
+	}
+
+	&__month::placeholder,
+	&__year::placeholder,
+	&__cardnumber::placeholder,
+	&__cardholder::placeholder {
+		color: $placeholder-color;
+		padding-left: 10px;
+		text-align: center;
+	}
+	&__cvc {
+		width: 75px;
+		height: 35px;
+		z-index: 2;
+		transform: translate(145%, -115%);
+	}
+	&__cvc::placeholder {
+		padding: 10px 20px 8px 18px;
+		color: $placeholder-color;
+	}
+	&__btn {
+		position: absolute;
+		bottom: 10%;
+		left: 39%;
+		width: 150px;
+		margin: 20px auto 0 auto;
+		padding: 9.5px 50px;
+	}
+}
+.btn:disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+.gratitude {
+	&__container {
+		width: 600px;
+		height: 400px;
+		background-image: url(../assets/images/pages/main/gratitude-panda.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&__text {
+		@include font-kit("Roboto", normal, normal, 35, 50, $white-color);
+		font-style: italic;
+	}
+	&__close {
+		color: $white-color;
+	}
+}
+.line {
+	background: $line-background;
+	display: block;
+}
+.bold {
+	height: 37px;
+	margin: 28px 0 8px 0;
+}
+.thin {
+	height: 5px;
+	margin-bottom: 5px;
+}
+.invalid {
+	border: $invalid-border;
+	margin-bottom: 0;
+}
+.invalid-text {
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: $invalid-text;
+	font-size: 10px;
+	font-weight: 100;
+	text-align: left;
+	&.invalid-cvc {
+		transform: translate(51%, -195%);
+	}
+}
+.valid {
+	border: $valid-border;
 }

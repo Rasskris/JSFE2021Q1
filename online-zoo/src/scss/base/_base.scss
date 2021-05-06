@@ -48,7 +48,15 @@ h2 {
 	padding: 0;
 	@include font-kit("Roboto", 500, normal, 40, 46.88);
 }
-
+input,
+select,
+textarea {
+	outline: none;
+	border: 1px solid #9ca498;
+}
+textarea {
+	resize: none;
+}
 .wrapper {
 	width: 100%;
 	max-width: 1920px;

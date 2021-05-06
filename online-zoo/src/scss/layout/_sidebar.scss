@@ -1,15 +1,19 @@
 .sidebar {
 	top: calc(287px - 54px);
 	position: fixed;
+	z-index: 10000;
+	&.scroll_active {
+		top: 0;
+		bottom: 30%;
+	}
 }
 .sidebar__wrapper {
 	padding-top: 10px;
 	width: 111px;
 	height: 380px;
-	background: url(../assets/images/svg/sidebar__bg.svg) no-repeat center;
+	background: url(../assets/images/svg/sidebar__bg.svg) no-repeat left;
 	display: flex;
 	flex-direction: column;
-	column-gap: 8px;
 }
 .sidebar__item {
 	width: 63px;
@@ -17,7 +21,6 @@
 	margin-left: 20px;
 	margin-bottom: 8px;
 	.link_hover {
-		transition: 0.1s;
 		display: inline-block;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -72,7 +75,7 @@
 	border: none;
 	&:hover {
 		cursor: pointer;
-		opacity: 0.85;
+		transform: scale(1.1);
 	}
 }
 

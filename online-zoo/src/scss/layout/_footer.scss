@@ -6,6 +6,7 @@
 	padding-top: 70px;
 	.wrapper {
 		background-color: #dff5b0;
+		max-width: 100%;
 	}
 }
 .footer__container {
@@ -59,10 +60,11 @@
 }
 .footer-part1__socials {
 	display: flex;
-	column-gap: 10px;
 }
+
 .socials__icon {
 	position: relative;
+	margin-right: 10px;
 	width: 40px;
 	height: 40px;
 	transition: 0.8s;
@@ -81,6 +83,9 @@
 	&:hover {
 		opacity: 0.65;
 	}
+}
+.socials__icon:last-child {
+	margin-right: 0;
 }
 .socials__icon-link {
 	position: absolute;
@@ -120,13 +125,12 @@
 	}
 	.footer-part1__nav {
 		margin-right: 0;
-		column-gap: 55px;
 	}
 	.footer-part1__btn {
 		margin: 0;
 	}
 	.menu {
-		margin-right: 0;
+		margin-right: 55px;
 	}
 	.footer-part2__info {
 		margin-right: 0;
@@ -155,12 +159,8 @@
 	}
 	.footer-part1__nav {
 		order: 2;
-		margin-right: 0;
-		column-gap: 55px;
 	}
-	.menu {
-		margin-right: 0;
-	}
+
 	.footer-part1__socials {
 		order: 3;
 	}
@@ -213,7 +213,10 @@
 	}
 	.footer-part1__nav {
 		order: 2;
-		row-gap: 15px;
+	}
+	.menu {
+		margin-right: 0;
+		margin-bottom: 15px;
 	}
 	.footer-part1__socials {
 		order: 4;
@@ -245,6 +248,11 @@
 // Media queris end for max-width 630px
 
 @media screen and (max-width: 340px) {
+	.footer {
+		.wrapper {
+			padding-bottom: 0;
+		}
+	}
 	.footer-part1__logo-img {
 		margin-right: 7px;
 	}
@@ -253,5 +261,13 @@
 	}
 	.footer-part2__author {
 		margin-bottom: 3px;
+	}
+}
+
+@media screen and (max-width: 319px) {
+	.footer-part2__schools-logos {
+		.schools-logos__rs {
+			margin-right: 40px;
+		}
 	}
 }

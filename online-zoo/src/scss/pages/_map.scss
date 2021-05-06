@@ -2,15 +2,31 @@
 	background-color: #a7e1ff;
 }
 .map {
-	padding-bottom: 30px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 .main-map {
-	padding-top: 100px;
+	// padding-top: 100px;
 	background-color: #a7e1ff;
 	.wrapper {
 		margin-top: -1px;
 		background-color: #a7e1ff;
 	}
+}
+.map-wrapper-1 {
+	height: 945px;
+	position: relative;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.map-wrapper-2 {
+	position: static;
+	width: 100%;
+	// transition: all ease-in-out 0.5s;
 }
 .map__container {
 	background-image: url(../assets/images/pages/map/map-img.png);
@@ -18,7 +34,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
-	height: 745px;
+	height: 945px;
 }
 .map__region {
 	position: absolute;
@@ -130,12 +146,15 @@
 	}
 }
 .btn-container {
-	position: absolute;
-	left: calc(50% + 1008px / 2 + 404px);
-	top: calc(50% + 2px / 2 + 293.5px);
+	width: 0;
+	position: sticky;
+	z-index: 100;
+	bottom: 20px;
+	right: 20px;
+	margin-bottom: 5%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-end;
 	filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
 	.map-btn {
 		cursor: pointer;
@@ -146,7 +165,15 @@
 		height: 39px;
 		outline: none;
 		&:hover {
-			background-color: rgb(235, 235, 235);
+			background-color: rgb(78, 182, 227);
+		}
+		&:active {
+			transform: scale(0.9);
+			background-color: lawngreen;
+		}
+		&.map-btn_non-active {
+			opacity: 0.7;
+			pointer-events: none;
 		}
 	}
 }
@@ -165,7 +192,6 @@
 
 @media screen and (max-width: 1900px) {
 	.btn-container {
-		left: calc(100% - 52px);
 	}
 	.map__container {
 		overflow: hidden;
@@ -191,9 +217,6 @@
 		&.region-china {
 			left: calc(50% - 41px / 2 + 215.5px);
 		}
-	}
-	.btn-container {
-		top: calc(100% - 78px);
 	}
 	.map__item {
 		img {
