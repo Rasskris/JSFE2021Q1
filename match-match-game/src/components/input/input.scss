@@ -1,0 +1,28 @@
+.input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  outline: none;
+}
+.input_valid,
+.input_invalid {
+  background-position: right;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.input_valid {
+  border: 2px solid green;
+  background-color: rgb(226, 247, 204);
+  background-image: url(../../assets/icons/icon_valid.png);
+}
+.input_invalid {
+  border: 2px solid red;
+  background-color: rgb(244, 207, 207);
+  background-image: url(../../assets/icons/icon_invalid.png);
+}
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: 16px;
+}
