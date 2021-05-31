@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: aqua;
+  background-color: #f0f8ff;
+  // background-image: url('./assets/clouds.png');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+}
+a {
+  text-decoration: none;
+  padding: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
