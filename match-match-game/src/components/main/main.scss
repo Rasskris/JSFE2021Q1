@@ -1,0 +1,15 @@
+.main {
+  width: 80%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 32px #504e4e;
+  background-image: url('../../assets/drops.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
