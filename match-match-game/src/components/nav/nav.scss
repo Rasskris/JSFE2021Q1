@@ -1,0 +1,74 @@
+$black_color: #000;
+
+.nav {
+  background-color: inherit;
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__item {
+    margin-right: 30px;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgb(215, 245, 255);
+      box-shadow: 0 0.21px 0.5em rgb(0 0 0 / 50%);
+    }
+    &.nav__item_active {
+      background-color: rgb(215, 245, 255);
+      box-shadow: 0 0.21px 0.5em rgb(0 0 0 / 50%);
+    }
+  }
+  .nav__link {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    transition: all 0.3s;
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-shadow: 1px 0 #002, 0 1px #000, -1px 0 #002, 0 -1px #000;
+  }
+  // .nav__link_active {
+  //   background-color: rgb(215, 245, 255);
+  // }
+  .about {
+    background-image: url('../../assets/icons/about.png');
+  }
+  .score {
+    background-image: url('../../assets/icons/score.png');
+  }
+  .settings {
+    background-image: url('../../assets/icons/settings.png');
+  }
+  .about::after {
+    content: 'About Game';
+  }
+  .score::after {
+    content: 'Best Score';
+  }
+  .settings::after {
+    content: 'Game Settings';
+  }
+}
+.nav__link::after {
+  font-size: 10px;
+  margin-top: 72px;
+  text-align: center;
+  margin-left: 5px;
+}
