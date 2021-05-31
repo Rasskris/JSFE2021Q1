@@ -1,0 +1,15 @@
+export {default as BaseComponent} from './base-component/base-component';
+export {default as Header} from './header/header';
+export {default as Main} from './main/main';
+export {default as ModalWindow} from './modal-window/modal-window';
+export {default as Form} from './form/form';
+export {default as CardsField} from './cards-field/cards-field';
+export {default as Card} from './card/card';
+export {default as Timer} from './timer/timer' ;
+export {default as Game} from './game/game';
+export {default as AboutGame} from './about-game/about-game';
+export {default as UserField} from './user-field/user-field';
+export {default as GameSettings} from './game-settings/game-settigs';
+export {default as SettingItem} from './setting-item/setting-item';
+export {default as DropDownList} from './drop-down-list/drop-down-list';
+export {default as BestScore} from './best-score/best-score';
