@@ -1,0 +1,43 @@
+$black_color: #000;
+
+.setting__item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin: 10px;
+}
+.setting__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  color: rgb(232, 210, 44);
+  .setting__title {
+    letter-spacing: 2px;
+    text-shadow: -1px 0 $black_color, 0 1px $black_color, 1px 0 $black_color,
+      0 -1px $black_color;
+  }
+  .setting__desc {
+    color: rgb(123, 121, 121);
+    margin-bottom: 10px;
+  }
+}
+.setting__btn {
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/icons/drop-down.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+  }
+  &.setting__btn_active {
+    transform: rotate(180deg);
+  }
+}
