@@ -1,0 +1,77 @@
+.garage-page {
+	display: none;
+	&.active {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.form-conatiner {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+.form-update,
+.form-create,
+.btn-container {
+	display: flex;
+}
+.garage {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	.garage__item {
+		list-style: none;
+		margin-bottom: 10px;
+	}
+}
+
+.car-control {
+	display: flex;
+	align-items: center;
+}
+.car-drive {
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	border-bottom: 2px solid black;
+	.car-drive__finish {
+		position: absolute;
+		left: 85%;
+		font-size: 30px;
+	}
+}
+.car {
+	position: absolute;
+	left: 100px;
+	padding: 0;
+	margin: 0;
+	transform: translateY(10px);
+}
+@keyframes car-drive {
+	from {
+		left: 100px;
+	}
+	to {
+		left: 90%;
+	}
+}
+
+.btn-select,
+.btn-remove {
+	font-size: 12px;
+}
+
+.btn-start,
+.btn-stop {
+	margin-bottom: 10px;
+	padding: 5px;
+	font-size: 10px;
+	background-color: rgb(211, 176, 150);
+	&:hover {
+		background-color: rgb(172, 110, 63);
+	}
+}
