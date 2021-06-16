@@ -1,6 +1,7 @@
 import { Loader, Engine } from '../../libs';
 import { store } from '../../store';
 import { DrivePromise } from '../../interfaces';
+import { enableBtn } from '../../utils';
 import { carNames, carModels } from '../../constants';
 
 const getRandomCarName = () => {
@@ -26,10 +27,22 @@ const clearInputs = (form: HTMLFormElement) => {
   colorInput.value = '#000000';
 };
 
+const toggleDisablePropStartStopBtns = () => {
+  const startBtns = document.querySelectorAll('.btn-start');
+  const stopBtns = document.querySelectorAll('.btn-stop');
+
+  startBtns.forEach((btn) => {
+    btn.classList.toggle('disabled');
+  });
+  stopBtns.forEach((btn) => {
+    btn.classList.toggle('disabled');
+  });
+};
+
 const startCarAnimation = (id: number, duration: number) => {
   const carElement = document.getElementById(`car-${id}`) as HTMLDivElement;
 
-  carElement.style.animation = `car-drive ${duration}ms linear forwards`;
+  carElement.style.animation = `car-drive ${duration}s linear forwards`;
   carElement.style.animationPlayState = 'running';
 };
 
@@ -41,11 +54,13 @@ const stopCarAnimation = (id: number) => {
 
 const startCarDriving = async (id: number, loader: Loader, engine: Engine) => {
   const { velocity, distance } = await engine.start(id, loader);
-  const time = distance / velocity;
+  const countMsInSeconds = 1000;
+  const milliseconds = distance / velocity;
+  const seconds = (milliseconds / countMsInSeconds).toFixed(2);
 
-  startCarAnimation(id, time);
+  startCarAnimation(id, Number(seconds));
 
-  return time;
+  return Number(seconds);
 };
 
 const startRace = async (loader: Loader, engine: Engine) => (
@@ -72,16 +87,17 @@ const processWinner = async (loader: Loader, winnersURL: string, id: number, tim
 };
 
 const showMessageOfWinner = (name: string, time: number) => {
-  const countMsInSeconds = 1000;
-  const seconds = (time / countMsInSeconds).toFixed(2);
-
   const modalWindow = document.getElementById('modal') as HTMLDivElement;
   const messageElement = document.getElementById('message') as HTMLDivElement;
 
-  const templateOfMessage = `Car ${name} won with ${seconds}s time`;
+  const templateOfMessage = `Car ${name} won with ${time}s time`;
   messageElement.innerHTML = templateOfMessage;
 
-  setTimeout(() => modalWindow.setAttribute('style', 'display: block'), 3000);
+  const resetBtn = document.getElementById('btn-reset') as HTMLButtonElement;
+  setTimeout(() => {
+    enableBtn(resetBtn);
+    modalWindow.setAttribute('style', 'display: block');
+  }, 2000);
 };
 
 let isFirstSuccess = true;
@@ -124,4 +140,5 @@ export {
   startCarDriving,
   startRace,
   showMessageOfWinner,
+  toggleDisablePropStartStopBtns,
 };
