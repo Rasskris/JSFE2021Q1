@@ -21,7 +21,7 @@
 			justify-content: center;
 			align-items: center;
 			width: 500px;
-			background-color: rgb(197, 217, 254);
+			background-color: aqua;
 			.message {
 				font-size: 18px;
 				line-height: 24px;
@@ -37,7 +37,7 @@
 	top: -2px;
 	font-size: 18px;
 	font-weight: 200;
-	color: aqua;
+	color: rgb(0, 0, 0);
 	text-shadow: 1px 0 #002, 0 1px #000, -1px 0 #002, 0 -1px #000;
 	&:hover,
 	&:focus {
