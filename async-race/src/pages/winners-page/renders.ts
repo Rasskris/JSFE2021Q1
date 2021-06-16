@@ -9,9 +9,6 @@ const renderTableBody = (loader: Loader): Promise<string | undefined>[] | undefi
     if (id) {
       const { name, color } = await getDataByCarId(id, loader);
 
-      const countMsInSeconds = 1000;
-      const seconds = time > 10 ? (time / countMsInSeconds).toFixed(2) : time;
-
       const carNumber = store.winnersPage > 1 ? (countWinnersPerPage + index + 1) : (index + 1);
 
       const template = `
@@ -20,7 +17,7 @@ const renderTableBody = (loader: Loader): Promise<string | undefined>[] | undefi
             <td>${renderCarImage(color)}</td>
             <td>${name}</td>
             <td>${wins}</td>
-            <td>${seconds}s</td>
+            <td>${time}s</td>
           </tr>
         `;
 
