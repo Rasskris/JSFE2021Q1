@@ -11,7 +11,9 @@ import {
   processRace,
   startCarDriving,
   startRace,
-  stopCarAnimation } from './helpers';
+  stopCarAnimation,
+  toggleDisablePropStartStopBtns,
+} from './helpers';
 
 const engine = new Engine();
 
@@ -71,6 +73,8 @@ const generateCarsHandle = async (target: HTMLElement, loader: Loader): Promise<
 };
 
 const raceCarsHandle = async (target: HTMLElement, loader: Loader): Promise<void> => {
+  toggleDisablePropStartStopBtns();
+
   const resetBtn = document.getElementById('btn-reset') as HTMLButtonElement;
 
   store.carOnStart = false;
@@ -82,11 +86,10 @@ const raceCarsHandle = async (target: HTMLElement, loader: Loader): Promise<void
   const carIds = store.cars?.map((car) => car.id) as number[];
 
   processRace(drivePromises, carIds, winnersURL, loader);
-
-  enableBtn(resetBtn);
 };
 
 const resetRaceCarsHandle = async (): Promise<void> => {
+  toggleDisablePropStartStopBtns();
   comebackAllCarsToStart();
 };
 
