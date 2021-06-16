@@ -74,4 +74,9 @@
 	&:hover {
 		background-color: rgb(172, 110, 63);
 	}
+	&.disabled{
+		pointer-events: none;
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
 }
