@@ -1,2 +1,11 @@
-# rasskris-JSFE2021Q1
-Private repository for @rasskris
+<img width="400" alt="Screenshot" src="https://user-images.githubusercontent.com/62946911/120231412-0adc7f80-c25a-11eb-9121-010ea13180fa.png">
+
+https://rolling-scopes-school.github.io/rasskris-JSFE2021Q1/match-match-game/
+
+- [x] - Верстка содержит все описанные в требованиях блоки
+- [x] - Соблюдены все требования к валидации полей для регистрации игрока в приложении.
+- [x] - Реализован игровой цикл.
+- [x] - Реализована таблица рекордов.
+- [x] - Реализована страница settings.
+- [x] - Реализована страница about game.
+- [x] - Реализована механика добавления аватара игрока, который хранится в indexedDb в base64 формате и отображается в header и на странице рекордов.
